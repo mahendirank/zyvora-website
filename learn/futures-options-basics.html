@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Futures &amp; Options Without the Mystery — Lesson 06 | Zyvora Learn</title>
+<meta name="description" content="What derivatives really are, who uses them and why, leverage, time decay, and the risks nobody explains before your first F&amp;O trade. Free intermediate lesson from Zyvora Global Academy." />
+<link rel="icon" href="../images/tile-square.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="logo">ZYVORA <small>GLOBAL&nbsp;ACADEMY</small></a>
+    <nav class="nav-links">
+      <a href="../index.html" class="hidesm">Home</a>
+      <a href="index.html" style="color:var(--gold)">Learn</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap narrow crumb"><a href="index.html">← LEARNING PATH</a> / INTERMEDIATE / LESSON 06</div>
+
+<article class="wrap narrow">
+  <span class="ltag int">INTERMEDIATE · LESSON 06</span>
+  <h1>Futures &amp; Options Without the Mystery</h1>
+  <p class="ameta">10 MIN READ · ZYVORA GLOBAL ACADEMY</p>
+
+  <p>Derivatives have a reputation: complicated, dangerous, the place where retail accounts go to die. The second part is often true — but not because the instruments are complicated. It's because most people trade them <b>without knowing what they actually bought</b>. This lesson removes the mystery. It will not make you an options trader; it will make you someone who can't be fooled about what F&amp;O really is.</p>
+
+  <h2>A derivative is a contract, not a stock</h2>
+  <p>When you buy a share, you own a piece of a company. When you trade a derivative, you own a <b>contract whose value is derived from something else</b> — a stock, an index, gold, a currency. You never own the underlying thing. You own an agreement about its price, with an expiry date attached. That expiry date changes everything: shares can be held through a bad month; contracts cannot. <b>Time is part of the position.</b></p>
+
+  <h2>Futures: a locked-in price, both ways</h2>
+  <p>A futures contract is an agreement to buy or sell the underlying at a fixed price on a fixed date. Profit and loss move one-for-one with the underlying — if you're long a future and the index rises 1%, you gain roughly 1% of the <i>contract's full value</i>. And here is the part that matters: you control that full value by depositing only a <b>margin</b> — a fraction of it.</p>
+  <div class="exbox">
+    <span class="d">LEVERAGE — THE HONEST ARITHMETIC</span><br/>
+    Contract value ₹10,00,000 · margin required ≈ ₹1,50,000<br/>
+    Underlying moves +2% → P&amp;L +₹20,000 <span class="g">(+13% on your margin)</span><br/>
+    Underlying moves −2% → P&amp;L −₹20,000 <span class="r">(−13% on your margin)</span><br/>
+    <span class="d">The same lever lifts both ways. Nothing about leverage favours you.</span>
+  </div>
+  <p>Leverage doesn't create edge — it multiplies whatever you already have, including mistakes. Recall Lesson 03: if 1R for your account is ₹2,000, that number does not change because an instrument lets you risk more. Futures demand <i>wider</i> respect for position sizing, not less.</p>
+
+  <h2>Options: rights, not obligations — and a price for time</h2>
+  <p>An option is the right — not the obligation — to buy (a <b>call</b>) or sell (a <b>put</b>) the underlying at a chosen price (the <b>strike</b>) before expiry. For that right you pay a <b>premium</b>. The buyer's loss is capped at the premium; the seller collects the premium and carries the larger risk.</p>
+  <p>The premium has two parts, and confusing them is the classic beginner error:</p>
+  <ul>
+    <li><b>Intrinsic value</b> — what the option would be worth if exercised right now.</li>
+    <li><b>Time value</b> — everything else: payment for the <i>possibility</i> that the underlying moves before expiry.</li>
+  </ul>
+  <p>Time value melts every single day — faster as expiry approaches. This is <b>time decay</b>, and it means an option buyer can be <i>right about direction and still lose money</i>, because the move came too slowly or too late. Buying cheap out-of-the-money options because "it only costs ₹500" is not a small trade — it's a bet that a large move happens within a deadline, and the odds of that are priced in far more accurately than beginners assume.</p>
+
+  <h2>Who is on the other side — and why they're happy to be there</h2>
+  <p>From Lesson 01: every contract has a counterparty. In F&amp;O, much of the other side is <b>hedgers</b> — funds insuring portfolios with puts, businesses locking currency rates — and <b>professional option sellers</b> harvesting time decay with defined-risk structures. They aren't gambling against your direction; they're running a different business on a different clock. Understanding this cures the fantasy that options are a lottery ticket someone forgot to price properly. They are priced. Ruthlessly.</p>
+
+  <h2>The three rules before any first F&amp;O trade</h2>
+  <ol>
+    <li><b>Size by risk, not by margin allowed.</b> The exchange telling you that you <i>can</i> control ₹10 lakh is not advice that you should.</li>
+    <li><b>Know your maximum loss before entry — in rupees.</b> For option buyers it's the premium. For futures and option sellers, it must be a stop you've calculated, because the contract itself has no floor.</li>
+    <li><b>Never hold leveraged, expiring positions through binary events</b> without a plan (Lesson 05). Expiry plus event plus leverage is how accounts end in a day.</li>
+  </ol>
+
+  <div class="callout">
+    <h3>KEY TAKEAWAYS</h3>
+    <ul>
+      <li>Derivatives are expiring contracts about price — time is part of every position.</li>
+      <li>Leverage multiplies outcomes in both directions; your 1R stays the same.</li>
+      <li>Option premiums = intrinsic + time value; decay means direction alone isn't enough.</li>
+      <li>The other side is mostly hedgers and professional sellers — the pricing is not naive.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <h3>PRACTICE THIS WEEK</h3>
+    <p>Open an option chain for NIFTY (view only — no trading). Pick one call and one put, write down their premiums, and check them again each day for a week alongside the index level. Watch what happens to the premium on days the index barely moves. You are watching time decay with your own eyes — the tuition is free this way.</p>
+  </div>
+
+  <div class="pn">
+    <a href="trading-news-events.html">← PREV: HOW NEWS &amp; EVENTS MOVE PRICE</a>
+    <a href="building-a-trading-system.html">NEXT: BUILDING A TRADING SYSTEM →</a>
+  </div>
+
+  <div class="lesson-cta">
+    <h3>F&amp;O is taught properly in the Professional Trader Program</h3>
+    <p>Hedging, spreads and positional strategies — live, with risk rules built in from day one.</p>
+    <a class="btn btn-gold" href="../index.html#contact">Request Program Details</a>
+  </div>
+</article>
+
+<div class="discl-mini">
+  <div class="wrap narrow">Educational content only — not investment advice or trading signals. Derivatives trading involves substantial risk of loss. Full <a href="../legal.html#disclaimer" style="color:var(--gold)">risk disclosure</a>.</div>
+</div>
+<footer class="site">
+  <div class="wrap"><span>© Zyvora Global Academy</span><span><a href="index.html">Learning Path</a> &nbsp;·&nbsp; <a href="../index.html">Home</a></span></div>
+</footer>
+</body>
+</html>
