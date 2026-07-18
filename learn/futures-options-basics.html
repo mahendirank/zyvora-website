@@ -54,6 +54,28 @@
   </ul>
   <p>Time value melts every single day — faster as expiry approaches. This is <b>time decay</b>, and it means an option buyer can be <i>right about direction and still lose money</i>, because the move came too slowly or too late. Buying cheap out-of-the-money options because "it only costs ₹500" is not a small trade — it's a bet that a large move happens within a deadline, and the odds of that are priced in far more accurately than beginners assume.</p>
 
+  <figure class="fig">
+    <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chart: option time value decays slowly at first, then accelerates into expiry">
+      <line x1="60" y1="220" x2="610" y2="220" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+      <line x1="60" y1="220" x2="60" y2="30" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+      <path d="M 60 55 C 240 70, 400 95, 480 140 C 530 170, 570 205, 605 219" fill="none" stroke="#F5B301" stroke-width="3"/>
+      <text x="35" y="130" fill="#9fb1c4" font-family="monospace" font-size="11" transform="rotate(-90 35 130)" text-anchor="middle">TIME VALUE</text>
+      <text x="90"  y="240" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">60d</text>
+      <text x="230" y="240" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">45d</text>
+      <text x="370" y="240" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">30d</text>
+      <text x="500" y="240" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">15d</text>
+      <text x="600" y="240" fill="#ff5d6c" font-family="monospace" font-size="11" text-anchor="middle">EXPIRY</text>
+      <text x="200" y="45" fill="#9fb1c4" font-family="monospace" font-size="11">slow bleed while far from expiry…</text>
+      <text x="430" y="120" fill="#ff5d6c" font-family="monospace" font-size="11">…then the melt accelerates</text>
+      <rect x="480" y="30" width="130" height="1" fill="none"/>
+      <line x1="480" y1="35" x2="480" y2="220" stroke="rgba(255,93,108,.35)" stroke-width="1" stroke-dasharray="5 5"/>
+      <text x="484" y="45" fill="#9fb1c4" font-family="monospace" font-size="9">final 2 weeks:</text>
+      <text x="484" y="58" fill="#9fb1c4" font-family="monospace" font-size="9">direction alone</text>
+      <text x="484" y="71" fill="#9fb1c4" font-family="monospace" font-size="9">is not enough</text>
+    </svg>
+    <figcaption>Fig 1 — Time decay: an option buyer's silent daily cost, fastest near expiry</figcaption>
+  </figure>
+
   <h2>Who is on the other side — and why they're happy to be there</h2>
   <p>From Lesson 01: every contract has a counterparty. In F&amp;O, much of the other side is <b>hedgers</b> — funds insuring portfolios with puts, businesses locking currency rates — and <b>professional option sellers</b> harvesting time decay with defined-risk structures. They aren't gambling against your direction; they're running a different business on a different clock. Understanding this cures the fantasy that options are a lottery ticket someone forgot to price properly. They are priced. Ruthlessly.</p>
 

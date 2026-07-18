@@ -36,6 +36,31 @@
   <p>At any moment, a stock's price is simply the last price where a buyer and a seller agreed. That's all. It is not what the company is "worth" — it's the current settlement of a continuous argument between everyone trading it.</p>
   <p>Price moves when that argument tips. If buyers become more aggressive — willing to pay up to get filled — price rises until enough sellers are tempted in to meet them. If sellers become desperate, price falls until buyers see value. The engine of every move you'll ever trade is this <b>imbalance between urgent buyers and urgent sellers</b>. Indicators don't move price. News doesn't move price directly. People and algorithms reacting with orders move price.</p>
 
+  <figure class="fig">
+    <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: price moves toward the side with less urgency">
+      <text x="160" y="24" fill="#F4F6F8" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold">BUYERS MORE URGENT</text>
+      <rect x="60" y="150" width="60" height="60" fill="#2ee6a8" opacity=".85" rx="3"/>
+      <rect x="130" y="180" width="60" height="30" fill="#ff5d6c" opacity=".75" rx="3"/>
+      <text x="90" y="228" fill="#2ee6a8" font-family="monospace" font-size="11" text-anchor="middle">buy urgency</text>
+      <text x="160" y="242" fill="#ff5d6c" font-family="monospace" font-size="11" text-anchor="middle">sell urgency</text>
+      <line x1="230" y1="200" x2="230" y2="70" stroke="#2ee6a8" stroke-width="3"/>
+      <polygon points="230,55 222,75 238,75" fill="#2ee6a8"/>
+      <text x="230" y="45" fill="#2ee6a8" font-family="monospace" font-size="12" text-anchor="middle">PRICE RISES</text>
+
+      <line x1="320" y1="20" x2="320" y2="240" stroke="rgba(255,255,255,.12)" stroke-dasharray="4 4"/>
+
+      <text x="480" y="24" fill="#F4F6F8" font-family="monospace" font-size="13" text-anchor="middle" font-weight="bold">SELLERS MORE URGENT</text>
+      <rect x="380" y="180" width="60" height="30" fill="#2ee6a8" opacity=".75" rx="3"/>
+      <rect x="450" y="150" width="60" height="60" fill="#ff5d6c" opacity=".85" rx="3"/>
+      <text x="410" y="228" fill="#2ee6a8" font-family="monospace" font-size="11" text-anchor="middle">buy urgency</text>
+      <text x="480" y="242" fill="#ff5d6c" font-family="monospace" font-size="11" text-anchor="middle">sell urgency</text>
+      <line x1="550" y1="70" x2="550" y2="185" stroke="#ff5d6c" stroke-width="3"/>
+      <polygon points="550,200 542,180 558,180" fill="#ff5d6c"/>
+      <text x="550" y="55" fill="#ff5d6c" font-family="monospace" font-size="12" text-anchor="middle">PRICE FALLS</text>
+    </svg>
+    <figcaption>Fig 1 — Price moves toward whichever side has fewer willing counterparties</figcaption>
+  </figure>
+
   <h2>The players around your trade</h2>
   <ul>
     <li><b>Institutions</b> — mutual funds, insurance companies, FIIs. They move enormous size, which means they cannot enter or exit in one order. Their footprints (accumulation, distribution) create many of the structures you'll learn to read later.</li>
