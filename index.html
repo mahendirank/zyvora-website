@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zyvora Global Academy — Institutional-Grade Trading Education</title>
+<meta name="description" content="NISM-certified trading education from a full-time trader with 10 years in the markets. Structured programs, real risk management, and access to the Zyvora Terminal." />
+<link rel="icon" href="images/tile-square.jpg" />
+<meta property="og:title" content="Zyvora Global Academy" />
+<meta property="og:description" content="Institutional-grade trading education. NISM-certified. Powered by the Zyvora Terminal." />
+<meta property="og:image" content="images/hero-skyline.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#0A2540; --navy-2:#0e2f50; --navy-deep:#061a30;
+    --gold:#F5B301; --gold-2:#ffc62e;
+    --light:#F4F6F8; --slate:#9fb1c4; --card:#0f2c4d;
+    --line:rgba(255,255,255,.08); --green:#2ee6a8; --red:#ff5d6c;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--light);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.logo{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold)}
+  .mono{font-family:var(--mono)}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-family:Montserrat,sans-serif;transition:.2s;cursor:pointer;border:none;font-size:.95rem}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--light);border:1.5px solid rgba(255,255,255,.3)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  section{padding:88px 0}
+  .kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px}
+  .lead{color:var(--slate);max-width:640px;font-size:1.05rem}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(6,26,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-size:1.15rem;letter-spacing:.06em}
+  .logo small{display:block;font-family:var(--mono);font-weight:400;font-size:.58rem;letter-spacing:.32em;color:var(--slate)}
+  nav.menu{display:flex;gap:28px;font-size:.92rem;font-weight:500}
+  nav.menu a:hover{color:var(--gold)}
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  .btn-login{padding:9px 18px;font-size:.82rem;border-radius:6px;background:transparent;border:1.5px solid var(--gold);color:var(--gold);font-family:var(--mono);letter-spacing:.06em}
+  .btn-login:hover{background:var(--gold);color:var(--navy)}
+  .hamburger{display:none;background:none;border:none;color:var(--light);font-size:1.6rem;cursor:pointer}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(6,26,48,.78),rgba(6,26,48,.92)),url('images/hero-skyline.jpg') center/cover;padding:120px 0 80px}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;border:1px solid rgba(245,179,1,.4);color:var(--gold);padding:7px 14px;border-radius:99px;margin-bottom:22px}
+  .hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);max-width:760px;margin-bottom:20px}
+  .hero p.sub{color:var(--slate);font-size:1.12rem;max-width:600px;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .hero-note{font-size:.78rem;color:var(--slate);max-width:560px;font-family:var(--mono)}
+
+  /* ---------- Trust band ---------- */
+  .trust{background:var(--navy-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+  .trust b{display:block;font-family:Montserrat,sans-serif;font-size:1.05rem;color:var(--gold)}
+  .trust span{font-size:.8rem;color:var(--slate)}
+
+  /* ---------- Cards ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.25s}
+  .card:hover{border-color:rgba(245,179,1,.45);transform:translateY(-4px)}
+  .card .ic{font-size:1.5rem;margin-bottom:14px}
+  .card h3{font-size:1.12rem;margin-bottom:10px}
+  .card p{color:var(--slate);font-size:.92rem}
+
+  /* ---------- Programs ---------- */
+  .prog .card{display:flex;flex-direction:column}
+  .prog .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+  .prog ul{list-style:none;margin:16px 0 24px;flex:1}
+  .prog li{font-size:.9rem;color:var(--slate);padding:7px 0 7px 24px;position:relative;border-bottom:1px dashed rgba(255,255,255,.06)}
+  .prog li::before{content:'▸';position:absolute;left:2px;color:var(--gold)}
+  .prog .card.feat{border-color:var(--gold);position:relative;background:linear-gradient(180deg,rgba(245,179,1,.07),var(--card) 45%)}
+  .prog .card.feat::after{content:'TERMINAL INCLUDED';position:absolute;top:-11px;right:18px;background:var(--gold);color:var(--navy);font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:4px 10px;border-radius:5px}
+  .price-note{text-align:center;margin-top:26px;color:var(--slate);font-size:.85rem}
+
+  /* ---------- Terminal ---------- */
+  .term{background:var(--navy-deep)}
+  .term-flex{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin-top:20px}
+  .term-shot{background:#04121f;border:1px solid rgba(46,230,168,.25);border-radius:12px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);font-family:var(--mono);font-size:.72rem}
+  .term-bar{display:flex;align-items:center;gap:6px;background:#081c2e;padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .term-bar i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .term-bar .tt{margin-left:10px;color:var(--slate);letter-spacing:.12em;font-size:.62rem}
+  .term-body{padding:16px 18px;line-height:2}
+  .term-body .row{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(255,255,255,.05)}
+  .term-body .g{color:var(--green)} .term-body .r{color:var(--red)} .term-body .d{color:var(--slate)}
+  .term-feats{list-style:none;margin:22px 0 30px}
+  .term-feats li{padding:10px 0 10px 30px;position:relative;color:var(--slate);border-bottom:1px solid rgba(255,255,255,.05)}
+  .term-feats li b{color:var(--light)}
+  .term-feats li::before{content:'◈';position:absolute;left:2px;color:var(--gold)}
+
+  /* ---------- Founder ---------- */
+  .founder-flex{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;margin-top:20px}
+  .founder-img{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .cred{display:inline-block;background:rgba(245,179,1,.1);border:1px solid rgba(245,179,1,.35);border-radius:8px;padding:10px 16px;font-family:var(--mono);font-size:.78rem;color:var(--gold);margin-top:18px}
+
+  /* ---------- Steps ---------- */
+  .steps{counter-reset:s}
+  .steps .card{position:relative;padding-top:54px}
+  .steps .card::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;top:18px;left:26px;font-family:var(--mono);font-weight:700;color:rgba(245,179,1,.5);font-size:1.4rem}
+
+  /* ---------- FAQ ---------- */
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+  summary{padding:18px 22px;cursor:pointer;font-weight:600;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:'+';font-family:var(--mono);color:var(--gold);font-size:1.2rem}
+  details[open] summary::after{content:'–'}
+  details p{padding:0 22px 18px;color:var(--slate);font-size:.92rem}
+
+  /* ---------- Contact ---------- */
+  .contact{background:linear-gradient(rgba(6,26,48,.88),rgba(6,26,48,.95)),url('images/markets-floor.jpg') center/cover}
+  .contact-box{max-width:640px;margin:0 auto;text-align:center}
+  .contact-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .btn-wa{background:#25D366;color:#06301b}
+  .btn-wa:hover{transform:translateY(-2px);filter:brightness(1.08)}
+
+  /* ---------- Disclaimer / footer ---------- */
+  .discl{background:var(--navy-deep);border-top:1px solid var(--line);padding:44px 0;font-size:.78rem;color:var(--slate)}
+  .discl h3{font-size:.85rem;color:var(--light);margin-bottom:10px;font-family:var(--mono);letter-spacing:.12em}
+  .discl p{margin-bottom:10px;max-width:900px}
+  footer{background:#04121f;padding:26px 0;font-size:.8rem;color:var(--slate)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a:hover{color:var(--gold)}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .grid3,.term-flex,.founder-flex{grid-template-columns:1fr}
+    .trust .wrap{grid-template-columns:repeat(2,1fr)}
+    nav.menu{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy-deep);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line)}
+    nav.menu.open{display:flex}
+    .hamburger{display:block}
+    .nav-cta .btn-ghost{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">ZYVORA <small>GLOBAL&nbsp;ACADEMY</small></a>
+    <nav class="menu" id="menu">
+      <a href="#why">Why Zyvora</a>
+      <a href="#programs">Programs</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#founder">Founder</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-login" href="https://terminal.zyvoratech.co/">CLIENT LOGIN ▸</a>
+      <button class="hamburger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="hero-badge">NISM CERTIFIED · EST. BY A FULL-TIME TRADER</span>
+    <h1>Trade with an <span class="gold">institutional edge</span> — not with tips.</h1>
+    <p class="sub">Zyvora Global Academy teaches the craft behind professional trading: market structure, risk management, and event-driven analysis — taught by a NISM-certified trader with 10 years in the markets, and backed by our proprietary Zyvora Terminal.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#contact">Request Program Details</a>
+      <a class="btn btn-ghost" href="#terminal">Explore the Terminal</a>
+    </div>
+    <p class="hero-note">Education only. We do not provide investment advice, tips or portfolio management. Markets carry risk.</p>
+  </div>
+</section>
+
+<!-- ================= TRUST BAND ================= -->
+<div class="trust">
+  <div class="wrap">
+    <div><b>NISM Certified</b><span>Reg. No. NISM-2510265038</span></div>
+    <div><b>10 Years</b><span>Full-time market experience</span></div>
+    <div><b>Multi-Asset</b><span>Equities · F&amp;O · Gold · FX</span></div>
+    <div><b>Zyvora Terminal</b><span>Proprietary market platform</span></div>
+  </div>
+</div>
+
+<!-- ================= WHY ================= -->
+<section id="why">
+  <div class="wrap">
+    <p class="kicker">Why Zyvora</p>
+    <h2>Most academies sell hype.<br/>We teach process.</h2>
+    <p class="lead">No screenshots of lambos. No "guaranteed" win rates. A structured curriculum built from a decade of real fundamental and technical trading.</p>
+    <div class="grid3">
+      <div class="card"><div class="ic">🎓</div><h3>Credentialed, not anonymous</h3><p>Your mentor is NISM-certified and trades the same markets you're learning — verifiable credentials, not a faceless "community".</p></div>
+      <div class="card"><div class="ic">🛡️</div><h3>Risk management first</h3><p>Position sizing, drawdown control and trade journaling are the core of the curriculum — because survival precedes profit.</p></div>
+      <div class="card"><div class="ic">🖥️</div><h3>Real tools of the trade</h3><p>Learn on the Zyvora Terminal — live multi-asset dashboards, curated market news and pre-market alerts, the way professionals prepare.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section id="programs" class="prog" style="background:var(--navy-deep)">
+  <div class="wrap">
+    <p class="kicker">Programs</p>
+    <h2>Choose your path</h2>
+    <p class="lead">Every program is education-only, cohort-based, and taught live. Pricing is shared on request after a short conversation about your goals and experience.</p>
+    <div class="grid3">
+      <div class="card">
+        <p class="tag">Level 01 · Beginner</p>
+        <h3>Market Foundations</h3>
+        <ul>
+          <li>How markets actually work — participants, order flow, sessions</li>
+          <li>Candlesticks, trends, support &amp; resistance done properly</li>
+          <li>Your first risk-managed trading plan</li>
+          <li>Live doubt-clearing sessions</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Request Pricing</a>
+      </div>
+      <div class="card">
+        <p class="tag">Level 02 · Intermediate</p>
+        <h3>Professional Trader Program</h3>
+        <ul>
+          <li>Price action &amp; market structure in depth</li>
+          <li>Futures &amp; options — hedging, spreads, positional strategies</li>
+          <li>Event-driven trading: results, macro data, geopolitics</li>
+          <li>Trade journaling &amp; performance review framework</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Request Pricing</a>
+      </div>
+      <div class="card feat">
+        <p class="tag">Level 03 · Advanced</p>
+        <h3>Elite Mentorship</h3>
+        <ul>
+          <li>1-on-1 mentorship with the founder</li>
+          <li>Full access to the Zyvora Terminal</li>
+          <li>Watchlist reviews &amp; pre-market preparation routine</li>
+          <li>Psychology, capital allocation &amp; scaling a trading business</li>
+        </ul>
+        <a class="btn btn-gold" href="#contact">Request Pricing</a>
+      </div>
+    </div>
+    <p class="price-note">Limited seats per cohort so every trader gets personal attention. Send a request — we reply personally, not with a bot.</p>
+  </div>
+</section>
+
+<!-- ================= TERMINAL ================= -->
+<section id="terminal" class="term">
+  <div class="wrap">
+    <p class="kicker">The Zyvora Terminal</p>
+    <h2>Our members don't just get videos.<br/>They get a <span class="gold">terminal</span>.</h2>
+    <div class="term-flex">
+      <div class="term-shot" aria-hidden="true">
+        <div class="term-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="tt">ZYVORA TERMINAL · LIVE</span></div>
+        <div class="term-body">
+          <div class="row"><span>NIFTY 50</span><span class="g">▲ 25,412.30&nbsp;&nbsp;+0.62%</span></div>
+          <div class="row"><span>BANKNIFTY</span><span class="g">▲ 57,880.15&nbsp;&nbsp;+0.48%</span></div>
+          <div class="row"><span>GOLD (XAU)</span><span class="r">▼ 3,341.60&nbsp;&nbsp;−0.21%</span></div>
+          <div class="row"><span>USD/INR</span><span class="g">▲ 86.14&nbsp;&nbsp;+0.09%</span></div>
+          <div class="row"><span class="d">NEWS</span><span class="d">RBI policy minutes: rates on hold…</span></div>
+          <div class="row"><span class="d">ALERT</span><span class="d">Watchlist: RELIANCE near breakout level</span></div>
+          <div class="row" style="border:none"><span class="d">PRE-MKT</span><span class="d">Gap scan ready · 08:45 IST</span></div>
+        </div>
+      </div>
+      <div>
+        <ul class="term-feats">
+          <li><b>Live multi-asset dashboard</b> — indices, stocks, gold and currencies in one Bloomberg-style view.</li>
+          <li><b>Curated market news archive</b> — searchable, tagged by stock, so you study how news moved price.</li>
+          <li><b>Watchlists &amp; alerts</b> — pre-market preparation delivered before the bell, straight to Telegram.</li>
+          <li><b>Built in-house</b> — designed by our founder for his own daily trading, now opened to members.</li>
+        </ul>
+        <a class="btn btn-gold" href="https://terminal.zyvoratech.co/">Client Login ▸</a>
+        &nbsp;&nbsp;<a class="btn btn-ghost" href="#contact">Request Access</a>
+        <p style="margin-top:14px;font-size:.75rem;color:var(--slate)" class="mono">Sample display for illustration. Terminal data is for education &amp; market study only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDER ================= -->
+<section id="founder">
+  <div class="wrap">
+    <p class="kicker">Your Mentor</p>
+    <h2>Learn from a trader,<br/>not a marketer.</h2>
+    <div class="founder-flex">
+      <div class="founder-img"><img src="images/gold.jpg" alt="Zyvora Global Academy founder" /></div>
+      <div>
+        <p class="lead" style="max-width:none">Zyvora Global Academy was founded by <b style="color:var(--light)">Mahendiran</b>, a full-time trader with 10 years of experience across Indian equities, derivatives, gold and currencies — combining fundamental research with technical execution.</p>
+        <p class="lead" style="max-width:none;margin-top:14px">After a decade of trading through bull runs, crashes and everything between, he built Zyvora to teach what actually survives in the market: process, risk control and event-driven thinking — the same discipline behind the in-house Zyvora Terminal.</p>
+        <span class="cred">✓ NISM CERTIFIED · REG. NO. NISM-2510265038</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STEPS ================= -->
+<section style="background:var(--navy-deep)">
+  <div class="wrap">
+    <p class="kicker">How to join</p>
+    <h2>Three steps to your first cohort</h2>
+    <div class="grid3 steps">
+      <div class="card"><h3>Send a request</h3><p>Tell us your experience level and which program interests you — on WhatsApp or the form below.</p></div>
+      <div class="card"><h3>Talk to us</h3><p>A short, honest conversation about your goals. We'll tell you which program fits — and if none does, we'll say so.</p></div>
+      <div class="card"><h3>Join your cohort</h3><p>Reserve your seat, get your onboarding pack, and start with the next live batch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="kicker">FAQ</p>
+    <h2>Straight answers</h2>
+    <div style="margin-top:30px">
+      <details open>
+        <summary>Do you give buy/sell tips or signals?</summary>
+        <p>No. Zyvora is an education academy — we teach you to analyse markets and manage risk yourself. We do not provide investment advice, stock tips, signals or portfolio management services.</p>
+      </details>
+      <details>
+        <summary>Are you SEBI registered?</summary>
+        <p>We are an education provider, not an investment adviser or research analyst service — so SEBI registration for advisory is not applicable to what we do. Our founder is NISM-certified (Reg. No. NISM-2510265038), and every program is strictly educational.</p>
+      </details>
+      <details>
+        <summary>Will I become profitable after the course?</summary>
+        <p>Nobody can honestly promise you profits — trading involves real risk of loss, and anyone who guarantees returns is misleading you. What we can promise is a professional process: structured analysis, risk management and the tools to develop your own edge.</p>
+      </details>
+      <details>
+        <summary>What is the Zyvora Terminal?</summary>
+        <p>Our in-house market platform — live dashboards, a searchable market-news archive, watchlists and pre-market alerts. It's included with Elite Mentorship and available to active members via Client Login.</p>
+      </details>
+      <details>
+        <summary>Why isn't pricing listed on the website?</summary>
+        <p>Because the right program depends on your experience and goals. Send a request and we'll share the full fee structure upfront in our first conversation — no pressure tactics, no fake discounts.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap contact-box">
+    <p class="kicker">Request Pricing &amp; Details</p>
+    <h2>Start the conversation</h2>
+    <p class="lead" style="margin:0 auto">Message us with your name, experience level and the program you're interested in. We personally reply to every request.</p>
+    <div class="contact-btns">
+      <a class="btn btn-wa" id="waBtn" href="#" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a class="btn btn-ghost" id="mailBtn" href="#">✉️ Email Us</a>
+      <a class="btn btn-ghost" href="https://terminal.zyvoratech.co/">🖥️ Client Login</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DISCLAIMER ================= -->
+<div class="discl">
+  <div class="wrap">
+    <h3>RISK DISCLOSURE &amp; DISCLAIMER</h3>
+    <p>Zyvora Global Academy ("Zyvora") is a market-education provider. All content, programs, sessions and tools — including the Zyvora Terminal — are for educational and informational purposes only and do not constitute investment advice, research recommendations, portfolio management or solicitation to buy or sell any security or financial instrument.</p>
+    <p>Trading and investing in equity, derivatives, commodity and currency markets involves substantial risk of loss and is not suitable for every investor. Past performance — of any market, strategy or individual — is not indicative of future results. You are solely responsible for your own trading and investment decisions; consult a SEBI-registered investment adviser before acting on any market information. Zyvora is not a SEBI-registered investment adviser or research analyst and does not handle client funds.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Zyvora Global Academy · zyvoratech.co</span>
+    <span>
+      <a href="legal.html#disclaimer">Disclaimer</a> &nbsp;·&nbsp;
+      <a href="legal.html#privacy">Privacy</a> &nbsp;·&nbsp;
+      <a href="legal.html#terms">Terms</a> &nbsp;·&nbsp;
+      <a href="https://terminal.zyvoratech.co/">Client Login</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  /* ===== CONFIG — fill these two values ===== */
+  var WHATSAPP_NUMBER = "";   // e.g. "919876543210" (country code + number, digits only)
+  var CONTACT_EMAIL   = "";   // e.g. "contact@zyvoratech.co"
+
+  var waMsg = encodeURIComponent("Hi Zyvora, I'd like details and pricing for your trading programs. My experience level: ");
+  var wa = document.getElementById('waBtn'), ml = document.getElementById('mailBtn');
+  if (WHATSAPP_NUMBER) { wa.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + waMsg; } else { wa.style.display = 'none'; }
+  if (CONTACT_EMAIL) { ml.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Program details request — Zyvora"); } else { ml.style.display = 'none'; }
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); }); });
+</script>
+</body>
+</html>
