@@ -77,6 +77,7 @@ article b,article strong{color:var(--light)}
 .exbox .g{color:var(--green)} .exbox .r{color:var(--red)} .exbox .d{color:var(--slate)}
 .fig{background:var(--navy-deep);border:1px solid var(--line);border-radius:10px;padding:20px 18px 14px;margin:28px 0}
 .fig svg{width:100%;height:auto;display:block}
+.fig img{width:100%;height:auto;display:block;border-radius:7px;border:1px solid rgba(255,255,255,.06)}
 .fig figcaption{font-family:var(--mono);font-size:.68rem;color:var(--slate);letter-spacing:.1em;margin-top:12px;text-align:center;text-transform:uppercase}
 .pn{display:flex;justify-content:space-between;gap:14px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
 .pn a{font-family:var(--mono);font-size:.78rem;color:var(--gold);letter-spacing:.06em}
