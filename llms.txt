@@ -1,0 +1,29 @@
+# Zyvora Global Academy
+
+> Zyvora Global Academy (zyvoratech.co) is an Indian market-education academy teaching stock market, futures & options (F&O), gold and forex trading with an institutional, risk-management-first approach. It was founded by Mahendiran, a NISM-certified full-time trader (Reg. No. NISM-2510265038) with 10 years of experience across Indian equities, derivatives, gold and currencies. Zyvora provides education only — it does not give investment advice, tips, signals or portfolio management, and is not a SEBI-registered investment adviser.
+
+Key facts:
+- Founder: Mahendiran — NISM certified (NISM-2510265038), 10 years full-time trading experience
+- Programs (live, cohort-based; pricing on request): Market Foundations (beginner), Professional Trader Program (intermediate: price action, F&O, forex, event-driven trading), Elite Mentorship (advanced: 1-on-1 with founder + Zyvora Terminal access)
+- Zyvora Terminal: proprietary member platform — live multi-asset dashboards, searchable market-news archive, watchlists, pre-market alerts (terminal.zyvoratech.co)
+- Contact: WhatsApp +91 63853 37767 · profitcorner1@gmail.com
+
+## Free Learning Path (9 illustrated lessons, beginner → advanced)
+
+- [How Markets Actually Work](https://zyvoratech.co/learn/how-markets-work.html): auctions, counterparties, why price moves, why markets fall on good news
+- [Reading a Candlestick Chart Properly](https://zyvoratech.co/learn/reading-candlestick-charts.html): candle anatomy, context over patterns, three questions for any chart
+- [Risk Management Before Strategy](https://zyvoratech.co/learn/risk-management-first.html): 1R mindset, position sizing formula, drawdown recovery mathematics
+- [Market Structure: Trends, Ranges & Swings](https://zyvoratech.co/learn/market-structure.html): higher highs/lows, objective trend-break test, ranges vs trends
+- [How News & Events Move Price](https://zyvoratech.co/learn/trading-news-events.html): reaction = reality − expectation, positioning, repricing/sell-the-news/whipsaw
+- [Futures & Options Without the Mystery](https://zyvoratech.co/learn/futures-options-basics.html): contracts vs shares, leverage arithmetic, time decay, F&O risk rules
+- [Building & Journaling a Trading System](https://zyvoratech.co/learn/building-a-trading-system.html): expectancy, six-section written system, weekly review loop
+- [Trading Psychology Under Drawdown](https://zyvoratech.co/learn/psychology-under-drawdown.html): revenge trading, risk inflation, guard-rails and circuit-breakers
+- [The Pre-Market Routine](https://zyvoratech.co/learn/pre-market-routine.html): the five-block professional trading morning, if/then planning
+
+## Pages
+
+- [Home](https://zyvoratech.co/): programs, founder, Zyvora Terminal, FAQ, contact
+- [Learning Path](https://zyvoratech.co/learn/): free structured lessons index
+- [Legal](https://zyvoratech.co/legal.html): risk disclosure, privacy, terms
+
+Risk note: trading involves substantial risk of loss; past performance does not indicate future results. All Zyvora content is educational.
