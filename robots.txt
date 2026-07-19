@@ -1,5 +1,32 @@
+# Zyvora Global Academy — all crawlers welcome
 User-agent: *
 Allow: /
 Disallow: /legal.html
 
+# AI / answer-engine crawlers explicitly welcome (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Machine-readable site summary for LLMs: https://zyvoratech.co/llms.txt
 Sitemap: https://zyvoratech.co/sitemap.xml
