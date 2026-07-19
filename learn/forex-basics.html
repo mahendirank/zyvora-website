@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Forex Basics: Pips, Lots &amp; Leverage — Lesson 03 | Zyvora Learn</title>
+<meta name="description" content="How the forex market works: currency pairs, pips, lot sizes, spreads, sessions, and the honest arithmetic of leverage and margin. Free beginner forex trading lesson from Zyvora Global Academy." />
+<link rel="icon" href="../images/tile-square.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": ["Article", "LearningResource"],
+   "@id": "https://zyvoratech.co/learn/forex-basics.html#article",
+   "headline": "Forex Basics: Pips, Lots & Leverage",
+   "description": "How the forex market works: currency pairs, pips, lot sizes, spreads, sessions, and the honest arithmetic of leverage and margin.",
+   "url": "https://zyvoratech.co/learn/forex-basics.html",
+   "inLanguage": "en",
+   "educationalLevel": "Beginner",
+   "timeRequired": "PT9M",
+   "learningResourceType": "Lesson",
+   "isAccessibleForFree": true,
+   "datePublished": "2026-07-19",
+   "dateModified": "2026-07-19",
+   "author": {
+    "@type": "Person", "@id": "https://zyvoratech.co/#founder", "name": "Mahendiran",
+    "jobTitle": "Founder & Chief Mentor, Zyvora Global Academy",
+    "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "NISM Certification", "identifier": "NISM-2510265038"}
+   },
+   "publisher": {"@type": "Organization", "@id": "https://zyvoratech.co/#org", "name": "Zyvora Global Academy", "logo": {"@type": "ImageObject", "url": "https://zyvoratech.co/images/tile-square.jpg"}},
+   "isPartOf": {"@type": "Course", "name": "The Zyvora Learning Path", "provider": {"@id": "https://zyvoratech.co/#org"}, "url": "https://zyvoratech.co/learn/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zyvoratech.co/"},
+    {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://zyvoratech.co/learn/"},
+    {"@type": "ListItem", "position": 3, "name": "Lesson 03: Forex Basics: Pips, Lots & Leverage", "item": "https://zyvoratech.co/learn/forex-basics.html"}
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="logo">ZYVORA <small>GLOBAL&nbsp;ACADEMY</small></a>
+    <nav class="nav-links">
+      <a href="../index.html" class="hidesm">Home</a>
+      <a href="index.html" style="color:var(--gold)">Learn</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap narrow crumb"><a href="index.html">← LEARNING PATH</a> / BEGINNER / LESSON 03</div>
+
+<article class="wrap narrow">
+  <span class="ltag beg">BEGINNER · LESSON 03</span>
+  <h1>Forex Basics: Pips, Lots &amp; Leverage</h1>
+  <p class="ameta">9 MIN READ · ZYVORA GLOBAL ACADEMY</p>
+
+  <p>The foreign-exchange market is the largest market on earth — trillions of dollars change hands every day, around the clock from Monday morning in Asia to Friday night in New York. It's also where beginners lose money fastest, for one reason: forex hands you enormous leverage before you understand the three numbers that define every trade — the <b>pip</b>, the <b>lot</b>, and the <b>margin</b>. This lesson makes those numbers boringly clear.</p>
+
+  <h2>You always trade a pair, never a currency</h2>
+  <p>You cannot simply "buy dollars" — you buy one currency <i>with</i> another. Every forex price is a pair: <b>EUR/USD 1.0850</b> means one euro costs 1.0850 US dollars. The first currency (EUR) is the <b>base</b> — the thing you're buying or selling. The second (USD) is the <b>quote</b> — what you pay with. Buying EUR/USD is a bet the euro strengthens against the dollar; selling it is the reverse. This is why forex is genuinely two-sided: every position is long one economy and short another at the same time.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: anatomy of a forex quote — base and quote currency, bid, ask and spread">
+      <text x="200" y="60" fill="#F4F6F8" font-family="monospace" font-size="34" text-anchor="middle" font-weight="bold">EUR<tspan fill="#9fb1c4">/</tspan>USD</text>
+      <text x="118" y="90" fill="#2ee6a8" font-family="monospace" font-size="11" text-anchor="middle">BASE — what you buy/sell</text>
+      <text x="292" y="90" fill="#F5B301" font-family="monospace" font-size="11" text-anchor="middle">QUOTE — what you pay with</text>
+      <line x1="60" y1="120" x2="580" y2="120" stroke="rgba(255,255,255,.12)"/>
+      <text x="170" y="165" fill="#ff5d6c" font-family="monospace" font-size="24" text-anchor="middle">1.0848</text>
+      <text x="170" y="188" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">BID — you SELL at this</text>
+      <text x="470" y="165" fill="#2ee6a8" font-family="monospace" font-size="24" text-anchor="middle">1.0850</text>
+      <text x="470" y="188" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">ASK — you BUY at this</text>
+      <path d="M 240 160 L 400 160" stroke="#F5B301" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="320" y="150" fill="#F5B301" font-family="monospace" font-size="11" text-anchor="middle">SPREAD = 2 pips</text>
+      <text x="320" y="228" fill="#9fb1c4" font-family="monospace" font-size="11" text-anchor="middle">the spread is the cost you pay to enter — you start every trade slightly behind</text>
+    </svg>
+    <figcaption>Fig 1 — Anatomy of a forex quote: base, quote, bid, ask and the spread</figcaption>
+  </figure>
+
+  <h2>The pip: how forex measures movement</h2>
+  <p>A <b>pip</b> is the standard unit of price movement — for most pairs, the fourth decimal place. EUR/USD moving from 1.0850 to 1.0860 has moved 10 pips. (For JPY pairs it's the second decimal.) Pips matter because they convert directly into money once you know your position size — and that's where lots come in.</p>
+
+  <h2>The lot: how forex measures size</h2>
+  <ul>
+    <li><b>Standard lot</b> = 100,000 units of the base currency → on EUR/USD, 1 pip ≈ $10</li>
+    <li><b>Mini lot</b> = 10,000 units → 1 pip ≈ $1</li>
+    <li><b>Micro lot</b> = 1,000 units → 1 pip ≈ $0.10</li>
+  </ul>
+  <p>Read that again with a beginner's account in mind. On one standard lot, an ordinary 50-pip day is $500 — moving against you as easily as for you. On a micro lot, the same day is $5. <b>The lot size, not the market, decides whether a normal fluctuation is survivable.</b> This is Lesson 04's position-sizing formula wearing forex clothes: choose the lot size so that your stop-loss distance in pips × pip value equals your planned 1R — never more.</p>
+
+  <h2>Leverage and margin: the honest arithmetic</h2>
+  <p>Brokers commonly offer 1:100, 1:500, even more. Leverage means you deposit a small <b>margin</b> to control a large position. What no advertisement says out loud:</p>
+  <div class="exbox">
+    <span class="d">LEVERAGE 1:100 — WHAT IT ACTUALLY MEANS</span><br/>
+    You deposit $1,000 margin → you control $100,000 (one standard lot)<br/>
+    Price moves <span class="g">+1%</span> in your favour → <span class="g">+$1,000 · account doubles</span><br/>
+    Price moves <span class="r">−1%</span> against you → <span class="r">−$1,000 · account gone</span><br/>
+    <span class="d">A 1% move in EUR/USD is roughly 100 pips — a normal week, sometimes a normal day.</span>
+  </div>
+  <p>Leverage is not extra money — it's a magnifier bolted to your account. The professional approach is to ignore the maximum leverage offered and size from risk instead: decide your 1R in money, measure your stop distance in pips, and let those two numbers dictate the lot size. Done that way, the broker's leverage setting becomes almost irrelevant — exactly how it should feel.</p>
+
+  <h2>Sessions: one market, three heartbeats</h2>
+  <p>Forex trades continuously, but not uniformly. Activity concentrates in three overlapping sessions — <b>Asia</b> (quiet, range-prone), <b>London</b> (the volume leader, where trends often start), and <b>New York</b> (momentum and US data). The London–New York overlap is typically the most liquid, fastest-moving window of the day. For an Indian trader this is convenient: the London open lands in the early evening IST — analysis after the NSE close, execution after dinner.</p>
+
+  <div class="callout">
+    <h3>KEY TAKEAWAYS</h3>
+    <ul>
+      <li>Every forex trade is a pair: long one currency, short the other. Price = cost of the base in the quote.</li>
+      <li>Pips measure movement; lots measure size; the spread is the entry cost.</li>
+      <li>Lot size decides survivability. Size from your 1R and stop distance — never from available leverage.</li>
+      <li>Leverage magnifies both directions. 1:100 means a 1% move settles the whole account.</li>
+      <li>Liquidity follows sessions: Asia → London → New York, with the overlap as the peak.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <h3>PRACTICE THIS WEEK</h3>
+    <p>Without trading, track EUR/USD or USD/INR for five days. Each day, note the day's range in pips, then calculate what that range would have meant in money on a standard, mini and micro lot. By Friday you will understand position sizing more deeply than most funded beginners.</p>
+  </div>
+
+  <section id="quiz" data-lesson="forex-basics"></section>
+  <script id="quiz-data" type="application/json">
+  {"questions":[
+    {"q":"In the pair EUR/USD at 1.0850, what does the price mean?","opts":["One dollar costs 1.0850 euros","One euro costs 1.0850 dollars","The spread is 1.0850 pips"],"a":1,"why":"The first currency is the base; the price is what one unit of it costs in the quote currency."},
+    {"q":"EUR/USD moves from 1.0850 to 1.0895. How many pips is that?","opts":["4.5 pips","45 pips","450 pips"],"a":1,"why":"A pip is the fourth decimal place — 0.0045 = 45 pips."},
+    {"q":"With 1:100 leverage on one standard lot, roughly what does a 1% adverse move do to a $1,000 margin deposit?","opts":["Loses about $10","Loses about $100","Wipes out the full $1,000"],"a":2,"why":"1% of the $100,000 position is $1,000 — the entire margin. Leverage magnifies both directions."},
+    {"q":"What should decide your lot size?","opts":["The maximum leverage your broker allows","Your 1R risk amount divided by the stop distance in pips","The size other traders in a community use"],"a":1,"why":"Size from risk: planned risk ÷ (stop distance × pip value). Available leverage is irrelevant to correct sizing."}
+  ]}
+  </script>
+  <script src="quiz.js" defer></script>
+
+  <div class="pn">
+    <a href="reading-candlestick-charts.html">← PREV: READING A CANDLESTICK CHART</a>
+    <a href="risk-management-first.html">NEXT: RISK MANAGEMENT BEFORE STRATEGY →</a>
+  </div>
+
+  <div class="lesson-cta">
+    <h3>Forex is taught hands-on in our programs</h3>
+    <p>Pairs, sessions, sizing and event-driven currency moves — live, with a NISM-certified mentor.</p>
+    <a class="btn btn-gold" href="../index.html#contact">Request Program Details</a>
+  </div>
+</article>
+
+<div class="discl-mini">
+  <div class="wrap narrow">Educational content only — not investment advice or trading signals. Forex trading involves substantial risk of loss. Full <a href="../legal.html#disclaimer" style="color:var(--gold)">risk disclosure</a>.</div>
+</div>
+<footer class="site">
+  <div class="wrap"><span>© Zyvora Global Academy</span><span><a href="index.html">Learning Path</a> &nbsp;·&nbsp; <a href="../index.html">Home</a></span></div>
+</footer>
+</body>
+</html>

@@ -86,6 +86,38 @@ article b,article strong{color:var(--light)}
 .lesson-cta h3{margin-bottom:8px}
 .lesson-cta p{color:var(--slate);font-size:.92rem;margin-bottom:18px}
 
+/* ---- Quiz ---- */
+#quiz{margin-top:44px;padding-top:10px;border-top:1px solid var(--line)}
+.quiz-kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--gold);display:block;margin:16px 0 8px}
+.quiz-q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-top:16px}
+.quiz-question{color:var(--light);font-weight:600;margin-bottom:14px}
+.quiz-opts{display:grid;gap:10px}
+.quiz-opts button{text-align:left;background:var(--navy-deep);border:1px solid rgba(255,255,255,.14);border-radius:9px;color:#c6d2e0;padding:12px 16px;font-size:.92rem;font-family:Inter,sans-serif;cursor:pointer;transition:.15s}
+.quiz-opts button:hover{border-color:var(--gold)}
+.quiz-q.locked .quiz-opts button{cursor:default;opacity:.75}
+.quiz-opts button.right{border-color:var(--green);color:var(--green);opacity:1}
+.quiz-opts button.wrong{border-color:var(--red);color:var(--red);opacity:1}
+.quiz-fb{margin-top:12px;font-size:.86rem}
+.quiz-fb.ok{color:var(--green)} .quiz-fb.no{color:var(--slate)}
+.quiz-result{margin-top:18px;background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.3);border-radius:10px;padding:16px 20px;color:var(--light);font-size:.95rem}
+
+/* ---- Progress on hub ---- */
+.lesson.done{border-color:rgba(46,230,168,.5)}
+.lesson.done .num::after{content:'  ✓ DONE';color:var(--green)}
+.track-progress{font-family:var(--mono);font-size:.7rem;color:var(--slate);letter-spacing:.1em;margin:-4px 0 20px}
+.track-progress b{color:var(--green)}
+.pbar{display:inline-block;width:120px;height:6px;background:rgba(255,255,255,.08);border-radius:4px;vertical-align:middle;margin-right:10px;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--green);border-radius:4px;transition:width .4s}
+
+/* ---- Glossary ---- */
+.gloss-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.gloss{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+.gloss dt{font-family:var(--mono);color:var(--gold);font-size:.9rem;letter-spacing:.04em;margin-bottom:6px;font-weight:700}
+.gloss dd{color:var(--slate);font-size:.88rem;margin:0}
+.gloss-nav{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;margin-top:18px}
+.gloss-nav a{color:var(--gold);margin-right:10px}
+@media(max-width:700px){.gloss-grid{grid-template-columns:1fr}}
+
 footer.site{background:#04121f;border-top:1px solid var(--line);padding:26px 0;font-size:.78rem;color:var(--slate)}
 footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer.site a:hover{color:var(--gold)}

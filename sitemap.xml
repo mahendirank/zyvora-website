@@ -67,6 +67,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zyvoratech.co/learn/forex-basics.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zyvoratech.co/learn/economic-calendar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zyvoratech.co/learn/liquidity-smart-money.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zyvoratech.co/learn/glossary.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://zyvoratech.co/legal.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>yearly</changefreq>

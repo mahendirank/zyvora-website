@@ -8,22 +8,26 @@ Key facts:
 - Zyvora Terminal: proprietary member platform — live multi-asset dashboards, searchable market-news archive, watchlists, pre-market alerts (terminal.zyvoratech.co)
 - Contact: WhatsApp +91 63853 37767 · profitcorner1@gmail.com
 
-## Free Learning Path (9 illustrated lessons, beginner → advanced)
+## Free Learning Path (12 illustrated lessons with quizzes, beginner → expert)
 
 - [How Markets Actually Work](https://zyvoratech.co/learn/how-markets-work.html): auctions, counterparties, why price moves, why markets fall on good news
 - [Reading a Candlestick Chart Properly](https://zyvoratech.co/learn/reading-candlestick-charts.html): candle anatomy, context over patterns, three questions for any chart
+- [Forex Basics: Pips, Lots & Leverage](https://zyvoratech.co/learn/forex-basics.html): currency pairs, pip values, lot sizes, spread, sessions, honest leverage arithmetic
 - [Risk Management Before Strategy](https://zyvoratech.co/learn/risk-management-first.html): 1R mindset, position sizing formula, drawdown recovery mathematics
 - [Market Structure: Trends, Ranges & Swings](https://zyvoratech.co/learn/market-structure.html): higher highs/lows, objective trend-break test, ranges vs trends
 - [How News & Events Move Price](https://zyvoratech.co/learn/trading-news-events.html): reaction = reality − expectation, positioning, repricing/sell-the-news/whipsaw
+- [The Economic Calendar: Trading the Week Ahead](https://zyvoratech.co/learn/economic-calendar.html): impact ratings, forecast vs actual, key releases, Sunday weekly event map
 - [Futures & Options Without the Mystery](https://zyvoratech.co/learn/futures-options-basics.html): contracts vs shares, leverage arithmetic, time decay, F&O risk rules
 - [Building & Journaling a Trading System](https://zyvoratech.co/learn/building-a-trading-system.html): expectancy, six-section written system, weekly review loop
 - [Trading Psychology Under Drawdown](https://zyvoratech.co/learn/psychology-under-drawdown.html): revenge trading, risk inflation, guard-rails and circuit-breakers
+- [Liquidity & Smart Money Concepts, Demystified](https://zyvoratech.co/learn/liquidity-smart-money.html): liquidity sweeps, order blocks, fair value gaps, killzones — in plain auction language
 - [The Pre-Market Routine](https://zyvoratech.co/learn/pre-market-routine.html): the five-block professional trading morning, if/then planning
 
 ## Pages
 
 - [Home](https://zyvoratech.co/): programs, founder, Zyvora Terminal, FAQ, contact
-- [Learning Path](https://zyvoratech.co/learn/): free structured lessons index
+- [Learning Path](https://zyvoratech.co/learn/): free structured lessons index with progress tracking and quizzes
+- [Glossary](https://zyvoratech.co/learn/glossary.html): 36 trading and forex terms precisely defined
 - [Legal](https://zyvoratech.co/legal.html): risk disclosure, privacy, terms
 
 Risk note: trading involves substantial risk of loss; past performance does not indicate future results. All Zyvora content is educational.

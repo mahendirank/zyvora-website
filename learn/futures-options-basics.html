@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Futures &amp; Options Without the Mystery — Lesson 06 | Zyvora Learn</title>
+<title>Futures &amp; Options Without the Mystery — Lesson 08 | Zyvora Learn</title>
 <meta name="description" content="What derivatives really are, who uses them and why, leverage, time decay, and the risks nobody explains before your first F&amp;O trade. Free intermediate lesson from Zyvora Global Academy." />
 <link rel="icon" href="../images/tile-square.jpg" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -76,7 +76,7 @@
     {
      "@type": "ListItem",
      "position": 3,
-     "name": "Lesson 06: Futures & Options Without the Mystery",
+     "name": "Lesson 08: Futures & Options Without the Mystery",
      "item": "https://zyvoratech.co/learn/futures-options-basics.html"
     }
    ]
@@ -99,10 +99,10 @@
   </div>
 </header>
 
-<div class="wrap narrow crumb"><a href="index.html">← LEARNING PATH</a> / INTERMEDIATE / LESSON 06</div>
+<div class="wrap narrow crumb"><a href="index.html">← LEARNING PATH</a> / INTERMEDIATE / LESSON 08</div>
 
 <article class="wrap narrow">
-  <span class="ltag int">INTERMEDIATE · LESSON 06</span>
+  <span class="ltag int">INTERMEDIATE · LESSON 08</span>
   <h1>Futures &amp; Options Without the Mystery</h1>
   <p class="ameta">10 MIN READ · ZYVORA GLOBAL ACADEMY</p>
 
@@ -120,7 +120,7 @@
     Underlying moves −2% → P&amp;L −₹20,000 <span class="r">(−13% on your margin)</span><br/>
     <span class="d">The same lever lifts both ways. Nothing about leverage favours you.</span>
   </div>
-  <p>Leverage doesn't create edge — it multiplies whatever you already have, including mistakes. Recall Lesson 03: if 1R for your account is ₹2,000, that number does not change because an instrument lets you risk more. Futures demand <i>wider</i> respect for position sizing, not less.</p>
+  <p>Leverage doesn't create edge — it multiplies whatever you already have, including mistakes. Recall Lesson 04: if 1R for your account is ₹2,000, that number does not change because an instrument lets you risk more. Futures demand <i>wider</i> respect for position sizing, not less.</p>
 
   <h2>Options: rights, not obligations — and a price for time</h2>
   <p>An option is the right — not the obligation — to buy (a <b>call</b>) or sell (a <b>put</b>) the underlying at a chosen price (the <b>strike</b>) before expiry. For that right you pay a <b>premium</b>. The buyer's loss is capped at the premium; the seller collects the premium and carries the larger risk.</p>
@@ -160,7 +160,7 @@
   <ol>
     <li><b>Size by risk, not by margin allowed.</b> The exchange telling you that you <i>can</i> control ₹10 lakh is not advice that you should.</li>
     <li><b>Know your maximum loss before entry — in rupees.</b> For option buyers it's the premium. For futures and option sellers, it must be a stop you've calculated, because the contract itself has no floor.</li>
-    <li><b>Never hold leveraged, expiring positions through binary events</b> without a plan (Lesson 05). Expiry plus event plus leverage is how accounts end in a day.</li>
+    <li><b>Never hold leveraged, expiring positions through binary events</b> without a plan (Lesson 06). Expiry plus event plus leverage is how accounts end in a day.</li>
   </ol>
 
   <div class="callout">
@@ -178,8 +178,14 @@
     <p>Open an option chain for NIFTY (view only — no trading). Pick one call and one put, write down their premiums, and check them again each day for a week alongside the index level. Watch what happens to the premium on days the index barely moves. You are watching time decay with your own eyes — the tuition is free this way.</p>
   </div>
 
+  <section id="quiz" data-lesson="futures-options-basics"></section>
+  <script id="quiz-data" type="application/json">
+  {"questions": [{"q": "What is an option buyer's maximum possible loss?", "opts": ["Unlimited", "The premium paid", "The margin requirement"], "a": 1, "why": "The right-not-obligation structure caps the buyer's loss at the premium. Sellers carry the larger risk."}, {"q": "You were right on direction but your bought option still lost value. Most likely cause?", "opts": ["Time decay — the move came too slowly for the expiry", "The exchange made an error", "Options don't follow the underlying"], "a": 0, "why": "Time value melts daily and faster near expiry — direction alone isn't enough for an option buyer."}, {"q": "Your broker's margin allows a ₹10 lakh position. You should size based on:", "opts": ["The full margin available", "Your 1R risk amount and the stop distance", "What feels confident today"], "a": 1, "why": "Margin permission is not sizing advice. Risk rules from the sizing formula still govern derivatives."}]}
+  </script>
+  <script src="quiz.js" defer></script>
+
   <div class="pn">
-    <a href="trading-news-events.html">← PREV: HOW NEWS &amp; EVENTS MOVE PRICE</a>
+    <a href="economic-calendar.html">← PREV: THE ECONOMIC CALENDAR</a>
     <a href="building-a-trading-system.html">NEXT: BUILDING A TRADING SYSTEM →</a>
   </div>
 
