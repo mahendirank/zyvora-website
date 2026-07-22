@@ -26,6 +26,7 @@ Key facts:
 ## Pages
 
 - [Home](https://zyvoratech.co/): programs, founder, Zyvora Terminal, FAQ, contact
+- [Founder](https://zyvoratech.co/founder.html): Mahendiran — NISM-certified (NISM-2510265038) full-time trader, 10 years, author of all lessons
 - [Learning Path](https://zyvoratech.co/learn/): free structured lessons index with progress tracking and quizzes
 - [Glossary](https://zyvoratech.co/learn/glossary.html): 36 trading and forex terms precisely defined
 - [Legal](https://zyvoratech.co/legal.html): risk disclosure, privacy, terms
