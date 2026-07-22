@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Live Trading Masterclass — Zyvora Global Academy</title>
+<meta name="description" content="A free live masterclass with a NISM-certified full-time trader: how professionals read markets, manage risk and prepare before the bell. No tips, no hype — real education." />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="images/tile-square.jpg" />
+<meta property="og:title" content="Free Live Trading Masterclass — Zyvora Global Academy" />
+<meta property="og:description" content="Learn how professionals actually trade: market structure, risk management and the pre-market routine. Live, free, with a NISM-certified mentor." />
+<meta property="og:image" content="https://zyvoratech.co/images/og/index.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#0A2540; --navy-2:#0e2f50; --deep:#061a30; --gold:#F5B301; --gold-2:#ffc62e;
+    --light:#F4F6F8; --slate:#9fb1c4; --card:#0f2c4d; --line:rgba(255,255,255,.08);
+    --green:#2ee6a8; --red:#ff5d6c; --wa:#25D366; --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--light);line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:76px}
+  h1,h2,h3{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.18}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  section{padding:44px 0}
+  .kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  h2{font-size:clamp(1.4rem,4.5vw,1.9rem);margin-bottom:16px}
+  .btn{display:block;text-align:center;padding:17px 24px;border-radius:12px;font-weight:800;font-family:Montserrat,sans-serif;font-size:1.05rem;transition:.2s;box-shadow:0 8px 24px rgba(37,211,102,.25)}
+  .btn-wa{background:var(--wa);color:#06301b}
+  .btn-wa:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .btn small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;margin-top:4px;opacity:.85}
+
+  /* header strip */
+  .topbar{background:var(--deep);border-bottom:1px solid var(--line);padding:12px 0;text-align:center}
+  .topbar .logo{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:.08em;font-size:1rem}
+  .topbar .logo small{color:var(--slate);font-family:var(--mono);font-weight:400;font-size:.55rem;letter-spacing:.3em;display:block}
+
+  /* hero */
+  .hero{padding:40px 0 30px;background:radial-gradient(ellipse at top,#12365c 0%,var(--navy) 60%)}
+  .free-pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;border:1px solid rgba(46,230,168,.5);color:var(--green);padding:6px 14px;border-radius:99px;margin-bottom:16px}
+  .free-pill::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  .hero h1{font-size:clamp(1.7rem,6.5vw,2.5rem);margin-bottom:14px}
+  .hero .gold{color:var(--gold)}
+  .hero p.sub{color:var(--slate);font-size:1rem;margin-bottom:22px}
+  .mentor-card{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:22px 0}
+  .mentor-card img{width:74px;height:74px;object-fit:cover;border-radius:12px;border:1px solid rgba(245,179,1,.4)}
+  .mentor-card b{display:block;font-size:.98rem}
+  .mentor-card span{font-family:var(--mono);font-size:.66rem;color:var(--gold);letter-spacing:.06em;display:block;margin-top:3px}
+  .mentor-card em{font-style:normal;color:var(--slate);font-size:.78rem}
+
+  /* countdown + details */
+  .count{display:flex;gap:10px;justify-content:center;margin:20px 0}
+  .count div{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:10px 0;width:74px;text-align:center}
+  .count b{font-family:var(--mono);font-size:1.4rem;color:var(--gold);display:block}
+  .count span{font-family:var(--mono);font-size:.58rem;color:var(--slate);letter-spacing:.14em}
+  .details{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}
+  .details div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .details b{font-size:.86rem;display:block}
+  .details span{font-family:var(--mono);font-size:.62rem;color:var(--slate);letter-spacing:.1em}
+  .strike{color:var(--slate);text-decoration:line-through;font-size:.85rem}
+  .freebig{color:var(--green);font-weight:800}
+
+  /* learn list */
+  .learn li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px 15px 46px;margin-bottom:10px;position:relative;font-size:.93rem}
+  .learn li::before{content:'▸';position:absolute;left:18px;top:14px;color:var(--gold);font-size:1.1rem}
+  .learn li b{color:var(--light)}
+  .learn li{color:#c6d2e0}
+
+  /* personas */
+  .personas{display:grid;gap:10px}
+  .personas div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .personas b{display:block;margin-bottom:5px;font-size:.95rem}
+  .personas p{color:var(--slate);font-size:.85rem}
+  .personas .ic{font-size:1.3rem;margin-bottom:8px;display:block}
+
+  /* mentor full */
+  .cred-band{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+  .cred-band div{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+  .cred-band b{color:var(--gold);font-family:Montserrat,sans-serif;font-size:1rem;display:block}
+  .cred-band span{font-size:.68rem;color:var(--slate)}
+
+  /* bonus */
+  .bonus{background:linear-gradient(160deg,rgba(245,179,1,.1),var(--card));border:1px solid rgba(245,179,1,.45);border-radius:14px;padding:22px}
+  .bonus h3{color:var(--gold);margin-bottom:10px;font-size:1.05rem}
+  .bonus li{list-style:none;padding:6px 0 6px 26px;position:relative;color:#c6d2e0;font-size:.9rem}
+  .bonus li::before{content:'🎁';position:absolute;left:0;font-size:.85rem}
+
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  summary{padding:15px 18px;cursor:pointer;font-weight:600;font-size:.9rem;list-style:none;display:flex;justify-content:space-between;gap:10px}
+  summary::after{content:'+';font-family:var(--mono);color:var(--gold)}
+  details[open] summary::after{content:'–'}
+  details p{padding:0 18px 15px;color:var(--slate);font-size:.85rem}
+
+  /* honesty box */
+  .honest{background:var(--deep);border-left:3px solid var(--green);border-radius:0 12px 12px 0;padding:18px 20px;margin:24px 0}
+  .honest b{color:var(--green)}
+  .honest p{color:#c6d2e0;font-size:.9rem}
+
+  /* footer */
+  footer{background:#04121f;border-top:1px solid var(--line);padding:30px 0 40px;font-size:.72rem;color:var(--slate)}
+  footer p{margin-bottom:10px}
+
+  /* sticky cta */
+  .sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(6,26,48,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;z-index:50;display:flex;align-items:center;gap:12px}
+  .sticky .info{flex:1;min-width:0}
+  .sticky .info b{font-size:.78rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sticky .info span{font-family:var(--mono);font-size:.6rem;color:var(--gold);letter-spacing:.08em}
+  .sticky .btn{padding:12px 18px;font-size:.85rem;margin:0;box-shadow:none;white-space:nowrap}
+  @media(min-width:700px){.personas{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="logo">ZYVORA<small>GLOBAL ACADEMY</small></div></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="free-pill">FREE LIVE MASTERCLASS · LIMITED SEATS</span>
+    <h1>Learn how professionals <span class="gold">actually trade</span> — without tips, signals or hype.</h1>
+    <p class="sub">90 minutes, live. The exact framework a full-time trader built over 10 years: how markets really move, how position sizing keeps you alive, and how professionals prepare before the opening bell.</p>
+
+    <div class="mentor-card">
+      <img src="images/founder.jpg" alt="Mahendiran — NISM-certified trader, founder of Zyvora Global Academy" />
+      <div>
+        <b>Mahendiran</b>
+        <span>✓ NISM CERTIFIED · REG. NISM-2510265038</span>
+        <em>Full-time trader — 10 yrs · Equities · F&amp;O · Gold · Forex</em>
+      </div>
+    </div>
+
+    <div class="count" id="count">
+      <div><b id="cd">–</b><span>DAYS</span></div>
+      <div><b id="ch">–</b><span>HOURS</span></div>
+      <div><b id="cm">–</b><span>MINS</span></div>
+      <div><b id="cs">–</b><span>SECS</span></div>
+    </div>
+
+    <a class="btn btn-wa" id="cta1" href="#" target="_blank" rel="noopener">📲 Reserve My Free Seat on WhatsApp<small>YOU'LL GET THE ZOOM LINK &amp; REMINDER ON WHATSAPP</small></a>
+
+    <div class="details">
+      <div><b id="dateline">This Sunday</b><span>DATE</span></div>
+      <div><b>11:00 AM IST</b><span>TIME · LIVE ON ZOOM</span></div>
+      <div><b>Tamil + English</b><span>LANGUAGE</span></div>
+      <div><b><span class="strike">₹999</span> <span class="freebig">FREE</span></b><span>THIS BATCH ONLY</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU'LL LEARN ============ -->
+<section style="background:var(--deep)">
+  <div class="wrap">
+    <p class="kicker">In these 90 minutes</p>
+    <h2>What you'll walk away understanding</h2>
+    <ul class="learn">
+      <li><b>Why 9 out of 10 beginners lose</b> — and the learning order (risk → structure → strategy) that reverses it.</li>
+      <li><b>Who is on the other side of your trade</b> — how institutions, algorithms and market makers shape every candle you see.</li>
+      <li><b>The 1% position-sizing rule</b> — the exact formula that decides your quantity before you ever click buy.</li>
+      <li><b>How to read market structure</b> — spot who's in control of a chart in under a minute, and know the price where they lose it.</li>
+      <li><b>Why markets fall on "good" news</b> — the expectation game behind results days, RBI policy and global events.</li>
+      <li><b>The professional pre-market routine</b> — the 30-minute morning sheet that removes panic from your trading day.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Is this for you?</p>
+    <h2>This masterclass fits you if…</h2>
+    <div class="personas">
+      <div><span class="ic">💼</span><b>You're a working professional</b><p>You want a serious second skill in markets — built on process, not on watching tips channels all day.</p></div>
+      <div><span class="ic">🌱</span><b>You're a complete beginner</b><p>You've never traded, or you tried and lost — and you want to restart in the right order this time.</p></div>
+      <div><span class="ic">📉</span><b>You trade but can't stay consistent</b><p>Some wins, bigger losses. You suspect the problem is risk and psychology — you're right, and we'll show you why.</p></div>
+    </div>
+    <div class="honest">
+      <p><b>Who this is NOT for:</b> anyone looking for stock tips, "sure-shot" calls, or promises of monthly income. We're an education academy — we teach you to think, not what to buy. If you want signals, this will disappoint you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENTOR ============ -->
+<section style="background:var(--deep)">
+  <div class="wrap">
+    <p class="kicker">Your mentor</p>
+    <h2>Learn from a trader, not a marketer.</h2>
+    <p style="color:#c6d2e0;font-size:.93rem">Mahendiran has traded Indian markets full-time for a decade — equities, futures &amp; options, gold and currencies — through bull runs, crashes and everything between. He built the Zyvora Terminal, the in-house market platform his members use, and wrote the free 12-lesson Zyvora Learning Path. This masterclass is the live version of that decade: what actually survives in the market.</p>
+    <div class="cred-band">
+      <div><b>NISM</b><span>Certified · NISM-2510265038</span></div>
+      <div><b>10 Years</b><span>Full-time market experience</span></div>
+      <div><b>6,000+</b><span>Beginners guided</span></div>
+      <div><b>4 Markets</b><span>Equities · F&amp;O · Gold · Forex</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BONUS ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Attend live &amp; get</p>
+    <div class="bonus">
+      <h3>Free bonuses for every live attendee</h3>
+      <ul>
+        <li><b>The Zyvora Learning Path</b> — all 12 illustrated lessons with quizzes, from markets to smart money concepts</li>
+        <li><b>The Pre-Market Routine sheet</b> — the same 5-block morning checklist covered in the session</li>
+        <li><b>The Position-Sizing calculator method</b> — worked examples you can apply the next trading day</li>
+        <li><b>Q&amp;A access</b> — ask your questions directly at the end of the session</li>
+      </ul>
+    </div>
+    <a class="btn btn-wa" id="cta2" href="#" target="_blank" rel="noopener" style="margin-top:18px">📲 Yes, Reserve My Free Seat<small>SEATS ARE LIMITED PER BATCH FOR LIVE Q&amp;A</small></a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="background:var(--deep)">
+  <div class="wrap">
+    <p class="kicker">FAQ</p>
+    <h2>Quick answers</h2>
+    <details open><summary>Is it really free? What's the catch?</summary><p>Yes — this batch is free. The "catch" is simple and honest: if you find the session valuable, we'll tell you about our paid structured programs at the end. No pressure, no dark tactics — the 90 minutes of teaching is complete on its own.</p></details>
+    <details><summary>Will you give stock tips or signals?</summary><p>No. Zyvora is an education academy. We do not provide investment advice, tips, signals or portfolio management — in the masterclass or anywhere else.</p></details>
+    <details><summary>I'm a total beginner. Will I understand it?</summary><p>Yes — the session assumes zero knowledge and builds up. Experienced traders still benefit: the risk and preparation frameworks are where most self-taught traders have gaps.</p></details>
+    <details><summary>How do I join after registering?</summary><p>Register on WhatsApp and you'll receive the Zoom link and a reminder before the session starts. Join from any phone or laptop.</p></details>
+    <details><summary>Will there be a recording?</summary><p>The bonuses are for live attendees, and the Q&amp;A only happens live — so plan to attend. Recordings, when shared, go to registered participants only.</p></details>
+    <details><summary>Can I make guaranteed profits after this?</summary><p>No — and anyone who promises that is misleading you. Trading involves real risk of loss. What we teach is a professional process: risk management, structure and preparation. Outcomes depend on markets and on you.</p></details>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <h2>Trade with process.<br/><span style="color:var(--gold)">Start this Sunday.</span></h2>
+    <p style="color:var(--slate);font-size:.92rem;margin:12px 0 22px">90 minutes that reorder how you see markets — taught by a NISM-certified trader who does this for a living.</p>
+    <a class="btn btn-wa" id="cta3" href="#" target="_blank" rel="noopener">📲 Reserve My Free Seat Now<small>REGISTRATION TAKES 20 SECONDS ON WHATSAPP</small></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--light)">RISK DISCLOSURE:</b> Zyvora Global Academy is a market-education provider. This masterclass and all Zyvora content are for educational purposes only and do not constitute investment advice, research recommendations or solicitation to trade. Trading and investing in equity, derivatives, commodity and currency markets involves substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. No income, profit or outcome is promised or implied. Zyvora is not a SEBI-registered investment adviser and does not handle client funds. Consult a SEBI-registered investment adviser before making investment decisions.</p>
+    <p>© Zyvora Global Academy · zyvoratech.co · WhatsApp +91 63853 37767 · <a href="legal.html" style="color:var(--gold)">Privacy &amp; Terms</a></p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky">
+  <div class="info"><b>Free Live Masterclass</b><span id="stickydate">SUNDAY · 11 AM IST · ZOOM</span></div>
+  <a class="btn btn-wa" id="cta4" href="#" target="_blank" rel="noopener">Reserve Free Seat</a>
+</div>
+
+<script>
+(function () {
+  /* next Sunday 11:00 IST */
+  function nextSession() {
+    var now = new Date();
+    var ist = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+    var d = new Date(ist);
+    d.setHours(11, 0, 0, 0);
+    var add = (7 - ist.getDay()) % 7;
+    if (add === 0 && ist.getHours() >= 11) add = 7;
+    d.setDate(d.getDate() + add);
+    var offsetMs = ist.getTime() - now.getTime();
+    return { display: d, real: new Date(d.getTime() - offsetMs) };
+  }
+  var s = nextSession();
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var dateStr = 'Sunday, ' + s.display.getDate() + ' ' + months[s.display.getMonth()];
+  document.getElementById('dateline').textContent = dateStr;
+  document.getElementById('stickydate').textContent = (dateStr + ' · 11 AM IST').toUpperCase();
+
+  function tick() {
+    var ms = s.real.getTime() - Date.now();
+    if (ms < 0) ms = 0;
+    var d = Math.floor(ms / 864e5), h = Math.floor(ms % 864e5 / 36e5), m = Math.floor(ms % 36e5 / 6e4), sec = Math.floor(ms % 6e4 / 1e3);
+    document.getElementById('cd').textContent = d;
+    document.getElementById('ch').textContent = ('0' + h).slice(-2);
+    document.getElementById('cm').textContent = ('0' + m).slice(-2);
+    document.getElementById('cs').textContent = ('0' + sec).slice(-2);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* WhatsApp CTA with UTM tracking so you know which ad converted */
+  var p = new URLSearchParams(location.search);
+  var src = [p.get('utm_source'), p.get('utm_campaign'), p.get('utm_content')].filter(Boolean).join(' / ');
+  var msg = 'Hi Zyvora! I want to reserve my FREE seat for the live masterclass on ' + dateStr + ' (11 AM). My name is: ';
+  if (src) msg += '\n[ref: ' + src + ']';
+  var url = 'https://wa.me/916385337767?text=' + encodeURIComponent(msg);
+  ['cta1','cta2','cta3','cta4'].forEach(function (id) {
+    var el = document.getElementById(id); if (el) el.href = url;
+  });
+})();
+</script>
+</body>
+</html>
