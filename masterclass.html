@@ -122,7 +122,7 @@
   <div class="wrap">
     <span class="free-pill">FREE LIVE MASTERCLASS · LIMITED SEATS</span>
     <h1>Learn how professionals <span class="gold">actually trade</span> — without tips, signals or hype.</h1>
-    <p class="sub">90 minutes, live. The exact framework a full-time trader built over 10 years: how markets really move, how position sizing keeps you alive, and how professionals prepare before the opening bell.</p>
+    <p class="sub">2 hours, live on Sunday night. The exact framework a full-time trader built over 10 years: how markets really move, how position sizing keeps you alive, and how professionals prepare before the opening bell.</p>
 
     <div class="mentor-card">
       <img src="images/founder.jpg" alt="Mahendiran — NISM-certified trader, founder of Zyvora Global Academy" />
@@ -144,7 +144,7 @@
 
     <div class="details">
       <div><b id="dateline">This Sunday</b><span>DATE</span></div>
-      <div><b>11:00 AM IST</b><span>TIME · LIVE ON ZOOM</span></div>
+      <div><b>7:00 PM – 9:00 PM IST</b><span>TIME · LIVE ON ZOOM</span></div>
       <div><b>Tamil + English</b><span>LANGUAGE</span></div>
       <div><b><span class="strike">₹999</span> <span class="freebig">FREE</span></b><span>THIS BATCH ONLY</span></div>
     </div>
@@ -154,7 +154,7 @@
 <!-- ============ WHAT YOU'LL LEARN ============ -->
 <section style="background:var(--deep)">
   <div class="wrap">
-    <p class="kicker">In these 90 minutes</p>
+    <p class="kicker">In these 2 hours</p>
     <h2>What you'll walk away understanding</h2>
     <ul class="learn">
       <li><b>Why 9 out of 10 beginners lose</b> — and the learning order (risk → structure → strategy) that reverses it.</li>
@@ -220,7 +220,7 @@
   <div class="wrap">
     <p class="kicker">FAQ</p>
     <h2>Quick answers</h2>
-    <details open><summary>Is it really free? What's the catch?</summary><p>Yes — this batch is free. The "catch" is simple and honest: if you find the session valuable, we'll tell you about our paid structured programs at the end. No pressure, no dark tactics — the 90 minutes of teaching is complete on its own.</p></details>
+    <details open><summary>Is it really free? What's the catch?</summary><p>Yes — this batch is free. The "catch" is simple and honest: if you find the session valuable, we'll tell you about our paid structured programs at the end. No pressure, no dark tactics — the 2 hours of teaching are complete on their own.</p></details>
     <details><summary>Will you give stock tips or signals?</summary><p>No. Zyvora is an education academy. We do not provide investment advice, tips, signals or portfolio management — in the masterclass or anywhere else.</p></details>
     <details><summary>I'm a total beginner. Will I understand it?</summary><p>Yes — the session assumes zero knowledge and builds up. Experienced traders still benefit: the risk and preparation frameworks are where most self-taught traders have gaps.</p></details>
     <details><summary>How do I join after registering?</summary><p>Register on WhatsApp and you'll receive the Zoom link and a reminder before the session starts. Join from any phone or laptop.</p></details>
@@ -232,8 +232,8 @@
 <!-- ============ FINAL CTA ============ -->
 <section>
   <div class="wrap" style="text-align:center">
-    <h2>Trade with process.<br/><span style="color:var(--gold)">Start this Sunday.</span></h2>
-    <p style="color:var(--slate);font-size:.92rem;margin:12px 0 22px">90 minutes that reorder how you see markets — taught by a NISM-certified trader who does this for a living.</p>
+    <h2>Trade with process.<br/><span style="color:var(--gold)">Start this Sunday night.</span></h2>
+    <p style="color:var(--slate);font-size:.92rem;margin:12px 0 22px">Two hours on Sunday night that reorder how you see markets — taught by a NISM-certified trader who does this for a living.</p>
     <a class="btn btn-wa" id="cta3" href="#" target="_blank" rel="noopener">📲 Reserve My Free Seat Now<small>REGISTRATION TAKES 20 SECONDS ON WHATSAPP</small></a>
   </div>
 </section>
@@ -247,7 +247,7 @@
 
 <!-- ============ STICKY CTA ============ -->
 <div class="sticky">
-  <div class="info"><b>Free Live Masterclass</b><span id="stickydate">SUNDAY · 11 AM IST · ZOOM</span></div>
+  <div class="info"><b>Free Live Masterclass</b><span id="stickydate">SUNDAY · 7 PM IST · ZOOM</span></div>
   <a class="btn btn-wa" id="cta4" href="#" target="_blank" rel="noopener">Reserve Free Seat</a>
 </div>
 
@@ -258,9 +258,9 @@
     var now = new Date();
     var ist = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
     var d = new Date(ist);
-    d.setHours(11, 0, 0, 0);
+    d.setHours(19, 0, 0, 0);
     var add = (7 - ist.getDay()) % 7;
-    if (add === 0 && ist.getHours() >= 11) add = 7;
+    if (add === 0 && ist.getHours() >= 19) add = 7;
     d.setDate(d.getDate() + add);
     var offsetMs = ist.getTime() - now.getTime();
     return { display: d, real: new Date(d.getTime() - offsetMs) };
@@ -269,7 +269,7 @@
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var dateStr = 'Sunday, ' + s.display.getDate() + ' ' + months[s.display.getMonth()];
   document.getElementById('dateline').textContent = dateStr;
-  document.getElementById('stickydate').textContent = (dateStr + ' · 11 AM IST').toUpperCase();
+  document.getElementById('stickydate').textContent = (dateStr + ' · 7 PM IST').toUpperCase();
 
   function tick() {
     var ms = s.real.getTime() - Date.now();
@@ -285,7 +285,7 @@
   /* WhatsApp CTA with UTM tracking so you know which ad converted */
   var p = new URLSearchParams(location.search);
   var src = [p.get('utm_source'), p.get('utm_campaign'), p.get('utm_content')].filter(Boolean).join(' / ');
-  var msg = 'Hi Zyvora! I want to reserve my FREE seat for the live masterclass on ' + dateStr + ' (11 AM). My name is: ';
+  var msg = 'Hi Zyvora! I want to reserve my FREE seat for the live masterclass on ' + dateStr + ' (7 PM). My name is: ';
   if (src) msg += '\n[ref: ' + src + ']';
   var url = 'https://wa.me/916385337767?text=' + encodeURIComponent(msg);
   ['cta1','cta2','cta3','cta4'].forEach(function (id) {
