@@ -5,3 +5,4 @@ assets/
 .vercelignore
 .DS_Store
 ad-creatives.md
+ad-output/
