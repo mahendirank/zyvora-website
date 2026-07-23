@@ -86,6 +86,26 @@ article b,article strong{color:var(--light)}
 .lesson-cta h3{margin-bottom:8px}
 .lesson-cta p{color:var(--slate);font-size:.92rem;margin-bottom:18px}
 
+/* ---- Position-size calculator ---- */
+.calc{background:var(--navy-deep);border:1px solid rgba(245,179,1,.4);border-radius:14px;padding:24px 22px;margin:30px 0}
+.calc h3{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--gold);margin-bottom:4px}
+.calc .calc-sub{color:var(--slate);font-size:.84rem;margin-bottom:18px}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc-grid label{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;color:var(--slate);margin-bottom:6px}
+.calc-grid input{width:100%;background:var(--card);border:1px solid rgba(255,255,255,.18);border-radius:9px;color:var(--light);font-family:var(--mono);font-size:1.05rem;padding:11px 13px;outline:none}
+.calc-grid input:focus{border-color:var(--gold)}
+.riskchips{display:flex;gap:8px;margin-top:8px}
+.riskchips button{background:var(--card);border:1px solid rgba(255,255,255,.18);border-radius:7px;color:var(--slate);font-family:var(--mono);font-size:.72rem;padding:5px 12px;cursor:pointer}
+.riskchips button.on{border-color:var(--gold);color:var(--gold)}
+.calc-out{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-out div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+.calc-out b{font-family:var(--mono);font-size:1.25rem;color:var(--light);display:block}
+.calc-out .big b{color:var(--green);font-size:1.6rem}
+.calc-out span{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--slate)}
+.calc-note{margin-top:14px;font-size:.78rem;color:var(--slate);font-family:var(--mono)}
+.calc-note.warn{color:var(--red)}
+@media(max-width:600px){.calc-grid,.calc-out{grid-template-columns:1fr 1fr}}
+
 /* ---- Quiz ---- */
 #quiz{margin-top:44px;padding-top:10px;border-top:1px solid var(--line)}
 .quiz-kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--gold);display:block;margin:16px 0 8px}

@@ -180,6 +180,92 @@
   </div>
   <p>Notice what this means: the wider your stop, the smaller your position. Beginners do the opposite — they take big positions with tight, hopeful stops, get stopped out by normal noise, then remove the stop entirely. The formula protects you from all of that.</p>
 
+  <div class="calc" id="calc">
+    <h3>⚙ TRY IT — POSITION SIZE CALCULATOR</h3>
+    <p class="calc-sub">Enter your numbers and watch the formula work. This is the exact arithmetic from above — quantity = risk amount ÷ stop distance. Works for longs and shorts.</p>
+    <div class="calc-grid">
+      <div>
+        <label>CAPITAL (₹)</label>
+        <input type="number" id="c-cap" value="200000" min="0" inputmode="numeric" />
+      </div>
+      <div>
+        <label>RISK PER TRADE (%)</label>
+        <input type="number" id="c-risk" value="1" min="0.1" max="100" step="0.1" inputmode="decimal" />
+        <div class="riskchips">
+          <button type="button" data-r="0.5">0.5%</button>
+          <button type="button" data-r="1" class="on">1%</button>
+          <button type="button" data-r="2">2%</button>
+        </div>
+      </div>
+      <div>
+        <label>ENTRY PRICE (₹)</label>
+        <input type="number" id="c-entry" value="500" min="0" step="0.05" inputmode="decimal" />
+      </div>
+      <div>
+        <label>STOP-LOSS PRICE (₹)</label>
+        <input type="number" id="c-stop" value="480" min="0" step="0.05" inputmode="decimal" />
+      </div>
+    </div>
+    <div class="calc-out">
+      <div><b id="o-1r">—</b><span>1R · MAX LOSS (₹)</span></div>
+      <div><b id="o-dist">—</b><span>STOP DISTANCE (₹)</span></div>
+      <div class="big" style="grid-column:1/-1"><b id="o-qty">—</b><span>QUANTITY TO BUY / SELL</span></div>
+      <div><b id="o-val">—</b><span>POSITION VALUE (₹)</span></div>
+      <div><b id="o-pct">—</b><span>POSITION AS % OF CAPITAL</span></div>
+    </div>
+    <p class="calc-note" id="c-note">If the trade hits your stop, you lose exactly your planned 1R — nothing more.</p>
+  </div>
+
+  <script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var inr = function (n) { return Math.round(n).toLocaleString('en-IN'); };
+    function calc() {
+      var cap = +$('c-cap').value, riskPct = +$('c-risk').value,
+          entry = +$('c-entry').value, stop = +$('c-stop').value;
+      var note = $('c-note');
+      if (!(cap > 0) || !(riskPct > 0) || !(entry > 0) || !(stop > 0)) {
+        ['o-1r','o-dist','o-qty','o-val','o-pct'].forEach(function (i) { $(i).textContent = '—'; });
+        note.textContent = 'Fill in all four numbers to see your size.'; note.className = 'calc-note'; return;
+      }
+      var dist = Math.abs(entry - stop);
+      if (dist === 0) {
+        ['o-1r','o-dist','o-qty','o-val','o-pct'].forEach(function (i) { $(i).textContent = '—'; });
+        note.textContent = '⚠ Entry and stop cannot be the same price — the stop goes where your idea is proven wrong.';
+        note.className = 'calc-note warn'; return;
+      }
+      var oneR = cap * riskPct / 100;
+      var qty = Math.floor(oneR / dist);
+      var val = qty * entry;
+      $('o-1r').textContent = '₹' + inr(oneR);
+      $('o-dist').textContent = '₹' + dist.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+      $('o-qty').textContent = qty > 0 ? inr(qty) + (qty === 1 ? ' share' : ' shares') : '0';
+      $('o-val').textContent = '₹' + inr(val);
+      $('o-pct').textContent = (cap > 0 ? (100 * val / cap).toFixed(1) : '0') + '%';
+      if (qty === 0) {
+        note.textContent = '⚠ Your stop is too wide for this risk budget — even 1 share risks more than your 1R. Reduce the stop distance or accept a smaller-priced instrument.';
+        note.className = 'calc-note warn';
+      } else if (riskPct > 2) {
+        note.textContent = '⚠ Risking ' + riskPct + '% per trade: a normal 5-loss streak costs ~' + Math.round(riskPct * 5) + '% of your account. Lesson: size for the streak.';
+        note.className = 'calc-note warn';
+      } else {
+        note.textContent = 'If the trade hits your stop, you lose exactly ₹' + inr(oneR) + ' — your planned 1R, nothing more. ' +
+          'A wider stop would mean fewer shares, same risk.';
+        note.className = 'calc-note';
+      }
+    }
+    ['c-cap','c-risk','c-entry','c-stop'].forEach(function (id) { $(id).addEventListener('input', calc); });
+    document.querySelectorAll('.riskchips button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        $('c-risk').value = b.getAttribute('data-r');
+        document.querySelectorAll('.riskchips button').forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on'); calc();
+      });
+    });
+    calc();
+  })();
+  </script>
+
   <h2>Losing streaks are normal — plan for them</h2>
   <p>Even a good strategy that wins half the time will produce five losses in a row somewhere in every few hundred trades — that's not bad luck, it's statistics. At 1% risk, five straight losses cost about 5% of capital: uncomfortable, survivable, recoverable. At 10% risk per trade, the same ordinary streak destroys half your account and — as the table above shows — effectively ends your trading. <b>Your risk per trade must be set for the streak, not for the single trade.</b></p>
 
