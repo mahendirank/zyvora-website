@@ -240,6 +240,38 @@
   </div>
 </section>
 
+<!-- ================= CERTIFICATE ================= -->
+<section class="track" style="padding-bottom:0" id="certificate">
+  <div class="wrap">
+    <div class="certbox">
+      <p class="kicker">🏁 The finish line</p>
+      <h2 id="certTitle">Complete all 12 lessons.<br/>Earn your certificate.</h2>
+
+      <!-- locked state -->
+      <div id="certLocked">
+        <p class="lockline">YOUR PROGRESS: <b id="certCount">0/12</b> LESSONS COMPLETE</p>
+        <div class="certbar"><i id="certBarFill" style="width:0%"></i></div>
+        <p style="color:var(--slate);font-size:.9rem;max-width:520px;margin:0 auto">Pass every lesson's quiz and this box unlocks a personalised <b style="color:var(--light)">Zyvora Learning Path — Certificate of Completion</b>, signed with our founder's NISM credential, ready to download and share.</p>
+      </div>
+
+      <!-- unlocked state -->
+      <div id="certOpen" style="display:none">
+        <p style="color:var(--green);font-family:var(--mono);font-size:.85rem;letter-spacing:.1em;margin-bottom:6px">✓ ALL 12 LESSONS COMPLETE — WELL DONE.</p>
+        <p style="color:var(--slate);font-size:.9rem">Type your name exactly as you want it on the certificate:</p>
+        <div class="certname">
+          <input id="certName" maxlength="40" placeholder="Your full name" />
+        </div>
+        <canvas id="certCanvas" width="1600" height="1131"></canvas>
+        <div class="certbtns">
+          <button class="btn-gold2 btn" id="certMake">🎓 Generate My Certificate</button>
+          <a class="btn-gold2 btn" id="certDl" style="display:none;text-decoration:none">⬇ Download PNG</a>
+          <button class="btn-wa2 btn" id="certShare" style="display:none">📲 Share on WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= GLOSSARY BANNER ================= -->
 <section class="track" style="padding-top:0">
   <div class="wrap">
@@ -289,6 +321,98 @@
       var num = a.querySelector('.nnum');
       if (num) num.textContent = '✓';
     }
+  });
+
+  /* certificate lock/unlock */
+  var slugs = Array.prototype.map.call(document.querySelectorAll('.lesson[data-slug]'), function (c) { return c.getAttribute('data-slug'); });
+  var doneCount = slugs.filter(function (s) {
+    try { return localStorage.getItem('zyv-done-' + s) === '1'; } catch (e) { return false; }
+  }).length;
+  var total = slugs.length;
+  document.getElementById('certCount').textContent = doneCount + '/' + total;
+  document.getElementById('certBarFill').style.width = (100 * doneCount / total) + '%';
+  if (doneCount === total && total > 0) {
+    document.getElementById('certLocked').style.display = 'none';
+    document.getElementById('certOpen').style.display = 'block';
+    document.getElementById('certTitle').innerHTML = 'You finished the path. 🏁<br/>Claim your certificate.';
+  }
+
+  /* certificate canvas */
+  function drawCert(name) {
+    var cv = document.getElementById('certCanvas'), x = cv.getContext('2d');
+    var W = cv.width, H = cv.height;
+    // background
+    var g = x.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, '#0A2540'); g.addColorStop(1, '#061a30');
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    // double border
+    x.strokeStyle = '#F5B301'; x.lineWidth = 6; x.strokeRect(46, 46, W - 92, H - 92);
+    x.strokeStyle = 'rgba(245,179,1,.35)'; x.lineWidth = 1.5; x.strokeRect(66, 66, W - 132, H - 132);
+    // corner candle motifs
+    function candles(cx0, cy) {
+      var xx = cx0;
+      [[36,'#2ee6a8'],[52,'#ff5d6c'],[30,'#2ee6a8']].forEach(function (c) {
+        x.strokeStyle = c[1]; x.lineWidth = 3;
+        x.beginPath(); x.moveTo(xx + 9, cy - c[0] - 14); x.lineTo(xx + 9, cy + 14); x.stroke();
+        x.fillStyle = c[1]; x.fillRect(xx, cy - c[0], 18, c[0]);
+        xx += 28;
+      });
+    }
+    candles(110, 170); candles(W - 194, H - 130);
+    // text
+    x.textAlign = 'center'; x.fillStyle = '#F4F6F8';
+    x.font = '800 54px Montserrat, sans-serif';
+    x.fillText('ZYVORA', W / 2, 175);
+    x.font = '500 21px "JetBrains Mono", monospace'; x.fillStyle = '#9fb1c4';
+    x.fillText('G L O B A L   A C A D E M Y', W / 2, 212);
+    x.fillStyle = '#F5B301'; x.font = '500 26px "JetBrains Mono", monospace';
+    x.fillText('CERTIFICATE  OF  COMPLETION', W / 2, 330);
+    x.fillStyle = '#9fb1c4'; x.font = '400 24px Inter, sans-serif';
+    x.fillText('This certifies that', W / 2, 415);
+    x.fillStyle = '#F4F6F8'; x.font = '800 76px Montserrat, sans-serif';
+    x.fillText(name, W / 2, 520);
+    // gold underline
+    var nw = Math.min(x.measureText(name).width + 60, W - 400);
+    x.strokeStyle = '#F5B301'; x.lineWidth = 3;
+    x.beginPath(); x.moveTo(W / 2 - nw / 2, 552); x.lineTo(W / 2 + nw / 2, 552); x.stroke();
+    x.fillStyle = '#c6d2e0'; x.font = '400 27px Inter, sans-serif';
+    x.fillText('has completed The Zyvora Learning Path — all twelve lessons of', W / 2, 640);
+    x.fillText('market structure, risk management, forex, derivatives and trading psychology,', W / 2, 682);
+    x.fillText('from beginner to expert, passing every lesson quiz.', W / 2, 724);
+    // date + signature row
+    var d = new Date();
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    x.fillStyle = '#9fb1c4'; x.font = '500 22px "JetBrains Mono", monospace';
+    x.textAlign = 'left';
+    x.fillText('DATE: ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear(), 150, H - 190);
+    x.textAlign = 'right';
+    x.fillStyle = '#F4F6F8'; x.font = '700 30px Montserrat, sans-serif';
+    x.fillText('Mahendiran', W - 150, H - 220);
+    x.fillStyle = '#F5B301'; x.font = '500 19px "JetBrains Mono", monospace';
+    x.fillText('FOUNDER & CHIEF MENTOR · NISM-2510265038', W - 150, H - 188);
+    x.textAlign = 'center';
+    x.fillStyle = '#9fb1c4'; x.font = '500 20px "JetBrains Mono", monospace';
+    x.fillText('zyvoratech.co/learn  ·  free education · not investment advice', W / 2, H - 105);
+    cv.classList.add('show');
+  }
+  var makeBtn = document.getElementById('certMake');
+  if (makeBtn) makeBtn.addEventListener('click', function () {
+    var name = (document.getElementById('certName').value || '').trim();
+    if (!name) { document.getElementById('certName').focus(); return; }
+    document.fonts.ready.then(function () {
+      drawCert(name);
+      var dl = document.getElementById('certDl');
+      dl.href = document.getElementById('certCanvas').toDataURL('image/png');
+      dl.download = 'zyvora-certificate-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.png';
+      dl.style.display = 'inline-block';
+      var sh = document.getElementById('certShare');
+      sh.style.display = 'inline-block';
+      sh.onclick = function () {
+        var msg = 'I just completed the free 12-lesson Zyvora Learning Path — beginner to expert, every quiz passed! 🏁📈 Start yours free: https://zyvoratech.co/learn/';
+        window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+      };
+      makeBtn.textContent = '↻ Regenerate';
+    });
   });
 
   /* scroll reveal */
