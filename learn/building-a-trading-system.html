@@ -34,7 +34,7 @@
    "url": "https://zyvoratech.co/learn/building-a-trading-system.html",
    "inLanguage": "en",
    "educationalLevel": "Advanced",
-   "timeRequired": "PT10M",
+   "timeRequired": "PT17M",
    "learningResourceType": "Lesson",
    "isAccessibleForFree": true,
    "datePublished": "2026-07-18",
@@ -115,7 +115,7 @@
 <article class="wrap narrow">
   <span class="ltag adv">ADVANCED · LESSON 09</span>
   <h1>Building &amp; Journaling a Trading System</h1>
-  <p class="ameta">10 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
+  <p class="ameta">17 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
 
   <p>A strategy is an idea about when to buy and sell. A <b>system</b> is that idea plus everything that makes it survivable and repeatable: what you trade, when you don't trade, how much you risk, how you record results, and how you decide whether it's still working. Most traders who fail at this stage don't have a bad strategy — they have <i>only</i> a strategy.</p>
 
@@ -180,6 +180,34 @@
     5. Write next week's focus in a single sentence
   </div>
   <p>Note item 4. Changing your system after every losing week guarantees you're always trading an untested version of it. Adjust slowly, based on samples — not on the sting of the last trade.</p>
+
+  <h2>Backtesting honestly: the three lies to avoid</h2>
+  <p>Before risking money on a system, you test it on history — and immediately meet the three ways history lies to the eager:</p>
+  <ul>
+    <li><b>Hindsight fitting (overfitting):</b> add enough conditions and any random dataset yields a "profitable" system that memorised the past. Discipline: the fewer the rules, the more trustworthy the result. A system whose edge survives with three rules is worth ten that need nine.</li>
+    <li><b>Sample starvation:</b> twenty trades tell you almost nothing — streak math alone (Lesson 04) can make a coin look brilliant or broken across twenty flips. Aim for 100+ trades across different market regimes: a trending year, a choppy year, a crash.</li>
+    <li><b>Cost amnesia:</b> paper systems trade free; real ones pay spread, slippage, charges and the occasional bad fill. Deduct realistic costs per trade in the test — many published "edges" are smaller than a round trip's costs.</li>
+  </ul>
+  <div class="exbox">
+    <span class="d">FROM IDEA TO LIVE — THE 3-STAGE ROLLOUT</span><br/>
+    1. BACKTEST&nbsp;&nbsp;: 100+ historical trades, costs included → expectancy &gt; 0?<br/>
+    2. FORWARD&nbsp;&nbsp;&nbsp;: 30-50 paper/tiny-size trades in live markets → behaves like the test?<br/>
+    3. GRADUATE&nbsp;&nbsp;: full 1R size only after stage 2 matches stage 1<br/>
+    <span class="g">Most systems die honourably at stage 1 or 2 — cheaply. That's the system working.</span>
+  </div>
+
+  <h2>The journal's advanced layer: tagging</h2>
+  <p>Once basic journaling is habit, add one column: a <b>setup tag</b> (e.g. "pullback-long", "range-fade", "event-reaction"). After 50 trades, group by tag and compute expectancy per setup. Every trader who does this discovers the same uncomfortable truth: one or two setups produce essentially all the profit, and one reliably burns money. Cutting the burner setup is usually worth more than any new strategy you could learn — and you can only see it if the tags exist.</p>
+
+  <div class="callout">
+    <h3>COMMON MISTAKES AT THIS STAGE</h3>
+    <ul>
+      <li>Testing until the numbers look good, then stopping — that's fitting, not testing. Decide the rules first, then run the test once.</li>
+      <li>Abandoning a positive-expectancy system during its statistically normal drawdown (check: was the live drawdown worse than the backtest's worst? If not, nothing is broken).</li>
+      <li>Running three systems at once before one is mastered — attribution becomes impossible.</li>
+      <li>Optimising entries endlessly while ignoring exits, position sizing and the operator — the parts that actually decide outcomes.</li>
+    </ul>
+  </div>
 
   <div class="callout">
     <h3>KEY TAKEAWAYS</h3>

@@ -34,7 +34,7 @@
    "url": "https://zyvoratech.co/learn/futures-options-basics.html",
    "inLanguage": "en",
    "educationalLevel": "Intermediate",
-   "timeRequired": "PT10M",
+   "timeRequired": "PT18M",
    "learningResourceType": "Lesson",
    "isAccessibleForFree": true,
    "datePublished": "2026-07-18",
@@ -115,7 +115,7 @@
 <article class="wrap narrow">
   <span class="ltag int">INTERMEDIATE · LESSON 08</span>
   <h1>Futures &amp; Options Without the Mystery</h1>
-  <p class="ameta">10 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
+  <p class="ameta">18 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
 
   <p>Derivatives have a reputation: complicated, dangerous, the place where retail accounts go to die. The second part is often true — but not because the instruments are complicated. It's because most people trade them <b>without knowing what they actually bought</b>. This lesson removes the mystery. It will not make you an options trader; it will make you someone who can't be fooled about what F&amp;O really is.</p>
 
@@ -173,6 +173,37 @@
     <li><b>Know your maximum loss before entry — in rupees.</b> For option buyers it's the premium. For futures and option sellers, it must be a stop you've calculated, because the contract itself has no floor.</li>
     <li><b>Never hold leveraged, expiring positions through binary events</b> without a plan (Lesson 06). Expiry plus event plus leverage is how accounts end in a day.</li>
   </ol>
+
+  <h2>Futures pricing: premium, discount and the rollover rhythm</h2>
+  <p>A future rarely trades exactly at the underlying's price. The gap (the <b>basis</b>) reflects carrying cost — normally the future trades slightly above spot (premium), converging to spot as expiry approaches. Two practical reads: when a future flips to trading <i>below</i> spot (discount), positioning is unusually bearish — worth noting even if you never trade futures. And every month, positional traders must <b>roll over</b> — close the expiring contract and open the next one — paying the spread twice plus the price difference between contracts. That rollover cost is part of any multi-month futures plan, and the market-wide rollover percentage published near expiry is itself a sentiment reading: how much of the open interest was conviction, and how much gave up?</p>
+
+  <h2>Three Greeks in plain language</h2>
+  <p>You met time decay; it has a name — theta. Two siblings matter enough for this stage:</p>
+  <ul>
+    <li><b>Delta</b> — how much the option moves per ₹1 of underlying move. Deep in-the-money options behave like the stock (delta near 1); far out-of-the-money lottery tickets barely respond (delta near 0.1) — which is why the "cheap" option often does nothing even when you're right.</li>
+    <li><b>Theta</b> — the daily rent you pay as a buyer, collected by the seller. Accelerates violently in the final two weeks.</li>
+    <li><b>Vega</b> — sensitivity to implied volatility. This is the IV-crush lever from Lesson 06: before events, vega inflates premiums; after, it deflates them regardless of direction.</li>
+  </ul>
+  <div class="exbox">
+    <span class="d">WHY YOUR "CHEAP" OPTION LOST WHILE YOU WERE RIGHT</span><br/>
+    Direction ✓ &nbsp;+&nbsp; low delta (barely moved with the stock)<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; theta (paid rent every day it took)<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; vega (IV deflated after the event)<br/>
+    <span class="r">= right on the stock, wrong on the instrument.</span>
+  </div>
+
+  <h2>Defined-risk structures: the grown-up way to buy direction</h2>
+  <p>Once the Greeks are real to you, spreads become obvious. A <b>bull call spread</b> — buy one call, sell a higher-strike call — costs less than the naked call (the sold option finances part of it), suffers less theta and vega damage, and has a known maximum loss <i>and</i> maximum gain from the moment of entry. You give up the lottery tail; you gain a structure whose risk is defined by design rather than by your discipline. For a trader still building that discipline, defined-risk structures are not a compromise — they are the professional default.</p>
+
+  <div class="callout">
+    <h3>COMMON MISTAKES AT THIS STAGE</h3>
+    <ul>
+      <li>Buying deep out-of-the-money weekly options because they're "cheap" — cheap is the market pricing near-zero probability, honestly.</li>
+      <li>Selling options for "easy income" without understanding the seller carries the tail risk — years of premiums can exit in one gap.</li>
+      <li>Ignoring liquidity in strikes: wide option spreads quietly take percents per round trip.</li>
+      <li>Trading F&O for excitement while calling it hedging. Name the purpose of every derivative position before entry: hedge, defined-risk direction, or income — each has different rules.</li>
+    </ul>
+  </div>
 
   <div class="callout">
     <h3>KEY TAKEAWAYS</h3>

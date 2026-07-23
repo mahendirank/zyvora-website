@@ -34,7 +34,7 @@
    "url": "https://zyvoratech.co/learn/how-markets-work.html",
    "inLanguage": "en",
    "educationalLevel": "Beginner",
-   "timeRequired": "PT8M",
+   "timeRequired": "PT15M",
    "learningResourceType": "Lesson",
    "isAccessibleForFree": true,
    "datePublished": "2026-07-18",
@@ -115,7 +115,7 @@
 <article class="wrap narrow">
   <span class="ltag beg">BEGINNER · LESSON 01</span>
   <h1>How Markets Actually Work</h1>
-  <p class="ameta">8 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
+  <p class="ameta">15 MIN READ · BY <a href="../founder.html" style="color:var(--gold)">MAHENDIRAN</a>, NISM-CERTIFIED TRADER</p>
 
   <p>Before you learn a single chart pattern, you need to answer a question most traders never ask: <b>when I buy, who is selling to me — and why?</b></p>
   <p>Every trade has two sides. If you bought a stock at ₹500 hoping it goes up, somebody sold it to you at ₹500 — and they had a reason. Maybe they think it's going down. Maybe they're a fund locking in profit after a two-year hold. Maybe they're a market maker who will hedge the position seconds later and doesn't care about direction at all. The market is not a machine that pays out for good analysis. It is an <b>auction</b> where participants with different goals, timeframes and information meet at one price.</p>
@@ -165,6 +165,35 @@
     <img src="../images/charts/nifty-bigpicture.jpg" alt="NIFTY 50 daily chart across 21 months showing a full market cycle of rally, decline and recovery" loading="lazy" />
     <figcaption>Fig 2 — NIFTY 50, daily · 21 months of the auction in action: optimism paid for, unwound, and rebuilt · chart via TradingView</figcaption>
   </figure>
+
+  <h2>Order types: how your instruction actually reaches the market</h2>
+  <p>Everything in this lesson becomes concrete the moment you place an order, because every order type is a different answer to one trade-off: <b>certainty of price vs certainty of execution.</b></p>
+  <ul>
+    <li><b>Market order</b> — "fill me now at whatever the other side offers." You are guaranteed execution, not price. In a fast market the price you see and the price you get can differ meaningfully — that difference is slippage, and it is the cost of urgency.</li>
+    <li><b>Limit order</b> — "fill me at this price or better." You are guaranteed price, not execution. The market may never come to you; missing a trade is the cost of patience.</li>
+    <li><b>Stop order</b> — "once price touches X, act." Used both to exit (stop-loss) and to enter (breakout orders). Crucial detail: a triggered stop usually becomes a <i>market</i> order — in a gap or a fast move, your fill can be well beyond the trigger price.</li>
+  </ul>
+  <div class="exbox">
+    <span class="d">THE TRADE-OFF IN ONE LINE</span><br/>
+    MARKET order → certain fill, uncertain price<br/>
+    LIMIT order&nbsp; → certain price, uncertain fill<br/>
+    STOP order&nbsp;&nbsp; → certain trigger, uncertain fill price after it
+  </div>
+  <p>Now connect this to the auction: those resting limit orders <i>are</i> the liquidity everyone else trades against. When you place a limit buy below the market, you have joined the crowd of counterparties an urgent seller will eventually hit. When you place a market order, you are the urgent one — and you pay the spread for the privilege.</p>
+
+  <h2>The spread: the toll booth on every trade</h2>
+  <p>At any moment there are two prices: the <b>bid</b> (best resting buy order) and the <b>ask</b> (best resting sell order). Buy at market and you pay the ask; sell immediately and you receive the bid. The gap between them — the spread — goes to whoever provided the resting order, usually a market maker.</p>
+  <p>Practical consequences beginners discover the expensive way: every position starts slightly negative by the spread plus charges; spreads widen exactly when you most want to trade (news moments, opens, panics); and in illiquid stocks or far-from-the-money options, the spread alone can be several percent — a cost no strategy can reliably overcome. <b>Liquidity is a feature you should demand</b>: as a rule, trade instruments where the spread is a tiny fraction of the daily range.</p>
+
+  <div class="callout">
+    <h3>COMMON MISTAKES AT THIS STAGE</h3>
+    <ul>
+      <li>Placing market orders in illiquid stocks and blaming "manipulation" for the terrible fill — it was the spread you crossed.</li>
+      <li>Believing price falls "because there are more sellers than buyers." Every trade has exactly one buyer and one seller — price falls because sellers are more <i>urgent</i>, not more numerous.</li>
+      <li>Watching only price and ignoring who likely has to act — expiry days, index rebalancing and results days all create forced participants whose urgency is predictable.</li>
+      <li>Treating the market as an opponent. It is a venue. Your real opponents are your own costs, urgency and impatience.</li>
+    </ul>
+  </div>
 
   <div class="callout">
     <h3>KEY TAKEAWAYS</h3>
