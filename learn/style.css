@@ -101,6 +101,26 @@ article b,article strong{color:var(--light)}
 .quiz-fb.ok{color:var(--green)} .quiz-fb.no{color:var(--slate)}
 .quiz-result{margin-top:18px;background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.3);border-radius:10px;padding:16px 20px;color:var(--light);font-size:.95rem}
 
+/* ---- Journey map ---- */
+.journey{background:var(--navy-deep);border-bottom:1px solid var(--line);padding:34px 0 40px}
+.journey svg{width:100%;height:auto;display:block}
+.journey a{cursor:pointer}
+.journey a circle.node{fill:#0f2c4d;stroke-width:2.5;transition:.2s}
+.journey a:hover circle.node{fill:#173a63}
+.journey a.done circle.node{fill:#123c2f;stroke:#2ee6a8}
+.journey a.done text.nnum{fill:#2ee6a8}
+.jlegend{font-family:var(--mono);font-size:.66rem;color:var(--slate);letter-spacing:.1em;text-align:center;margin-top:12px}
+.jlegend b{color:var(--green)}
+
+/* ---- Card glyphs ---- */
+.lesson{padding-right:64px}
+.lesson .glyph{position:absolute;top:20px;right:18px;width:34px;height:34px;opacity:.9}
+
+/* ---- Scroll reveal ---- */
+.rev{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rev{opacity:1;transform:none;transition:none}}
+
 /* ---- Progress on hub ---- */
 .lesson.done{border-color:rgba(46,230,168,.5)}
 .lesson.done .num::after{content:'  ✓ DONE';color:var(--green)}
