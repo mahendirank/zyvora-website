@@ -8,7 +8,7 @@ Key facts:
 - Zyvora Terminal: proprietary member platform — live multi-asset dashboards, searchable market-news archive, watchlists, pre-market alerts (terminal.zyvoratech.co)
 - Contact: WhatsApp +91 63853 37767 · profitcorner1@gmail.com
 
-## Free Learning Path (12 illustrated lessons with quizzes, beginner → expert)
+## The Zyvora School — 6 free courses, 16 illustrated lessons with quizzes (beginner → expert)
 
 - [How Markets Actually Work](https://zyvoratech.co/learn/how-markets-work.html): auctions, counterparties, why price moves, why markets fall on good news
 - [Reading a Candlestick Chart Properly](https://zyvoratech.co/learn/reading-candlestick-charts.html): candle anatomy, context over patterns, three questions for any chart
@@ -22,6 +22,10 @@ Key facts:
 - [Trading Psychology Under Drawdown](https://zyvoratech.co/learn/psychology-under-drawdown.html): revenge trading, risk inflation, guard-rails and circuit-breakers
 - [Liquidity & Smart Money Concepts, Demystified](https://zyvoratech.co/learn/liquidity-smart-money.html): liquidity sweeps, order blocks, fair value gaps, killzones — in plain auction language
 - [The Pre-Market Routine](https://zyvoratech.co/learn/pre-market-routine.html): the five-block professional trading morning, if/then planning
+- [Indicators: What They Can and Can't Do](https://zyvoratech.co/learn/indicators-truth.html): why indicators lag, the four families' honest jobs, ATR-for-stops, optimisation trap
+- [Your First Trading Plan](https://zyvoratech.co/learn/first-trading-plan.html): the six-line one-page plan, filled example, paper → half-size → live graduation
+- [Choosing Your Trading Style](https://zyvoratech.co/learn/choosing-trading-style.html): scalping vs intraday vs swing vs positional — screen time, costs, psychology
+- [Trading Gold & USD/INR](https://zyvoratech.co/learn/gold-usdinr-playbook.html): real yields, crude, FII flows, RBI, the MCX = gold × rupee multiplication
 
 ## Pages
 

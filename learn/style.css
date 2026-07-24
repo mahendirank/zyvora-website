@@ -121,6 +121,13 @@ article b,article strong{color:var(--light)}
 .quiz-fb.ok{color:var(--green)} .quiz-fb.no{color:var(--slate)}
 .quiz-result{margin-top:18px;background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.3);border-radius:10px;padding:16px 20px;color:var(--light);font-size:.95rem}
 
+/* ---- School bands & courses ---- */
+.school-band{background:var(--navy-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0 22px;margin-top:10px}
+.school-band h2{font-size:1.25rem;letter-spacing:.04em}
+.school-band p{color:var(--slate);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;margin-top:6px}
+.course{padding:40px 0}
+.cnum{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--navy);background:var(--gold);border-radius:6px;padding:4px 10px;vertical-align:middle;margin-right:10px}
+
 /* ---- Journey map ---- */
 .journey{background:var(--navy-deep);border-bottom:1px solid var(--line);padding:34px 0 40px}
 .journey svg{width:100%;height:auto;display:block}
